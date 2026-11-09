@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>הסיפור שלכם | פיקו</title>
+<style>
+:root{--bg:#FBF6EC;--paper:#fff;--ink:#1F2A44;--muted:#5B6379;--line:#E6DCC8;--accent:#6B5CA5;--accent-ink:#fff;--gold:#C98B3C;--soft:#F1ECF8;--warn:#9A3B2E;--ok:#2F7D5B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171A2B;--paper:#20243A;--ink:#F2EBDD;--muted:#AEB4C8;--line:#343A58;--accent:#B3A6E8;--accent-ink:#171A2B;--gold:#E0A55A;--soft:#2A2842;--warn:#F0A090;--ok:#6FCF9C;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;padding:0 16px 80px}
+.wrap{max-width:720px;margin:0 auto}
+header{padding:28px 0 8px}
+.mark{font-weight:800;font-size:34px;color:var(--accent);direction:ltr;display:inline-block}
+h1{font-size:clamp(30px,6vw,44px);line-height:1.1;margin:14px 0 8px}
+h2{font-size:24px;margin:0 0 6px}
+.bar{display:block;width:70px;height:5px;background:var(--gold);margin:28px 0 14px}
+.lead{color:var(--muted);margin:0 0 6px}
+section{margin-top:8px}
+.field{display:flex;flex-direction:column;gap:6px;margin:14px 0}
+label,.legend{font-weight:700}
+.hint{color:var(--muted);font-size:15px;font-weight:400}
+input[type=text],input[type=tel],textarea,select{font:inherit;color:inherit;background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:11px 13px;width:100%}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--accent);outline-offset:1px}
+.choices{display:flex;gap:10px;flex-wrap:wrap}
+.choice input{position:absolute;opacity:0}
+.choice label{display:block;border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:9px 18px;cursor:pointer;font-weight:600}
+.choice input:checked+label{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.choice input:focus-visible+label{outline:3px solid var(--accent);outline-offset:2px}
+.char{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:6px 18px 14px;margin:14px 0}
+.char h3{margin:12px 0 0;font-size:22px;display:flex;justify-content:space-between;align-items:center}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.drop{border:2px dashed var(--line);border-radius:12px;padding:12px;text-align:center;cursor:pointer;background:var(--soft);min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:15px;position:relative;overflow:hidden}
+.drop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.drop b{font-size:16px}
+.btn{font:inherit;font-weight:700;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:12px 26px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.small{padding:6px 14px;font-size:15px}
+.btn:disabled{opacity:.6;cursor:wait}
+.check{display:flex;gap:10px;align-items:flex-start;margin:12px 0;font-weight:400}
+.check input{margin-top:6px;width:20px;height:20px;flex:none}
+.q{background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:6px 16px 12px;margin:12px 0}
+.q .hint{margin-top:-2px}
+.status{margin-top:14px;font-weight:700;min-height:1.6em}
+.status.bad{color:var(--warn)}.status.ok{color:var(--ok)}
+.voice{background:var(--soft);border-radius:14px;padding:12px 16px;margin:14px 0}
+.done{text-align:center;padding:40px 0}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><span class="mark">Pikoo.</span>
+<h1>הסיפור שלכם</h1>
+<p class="lead">תודה על התשלום! זה השלב שבו הספר נהיה שלכם. ככל שהפרטים אמיתיים ומדויקים יותר, הספר יוצא טוב יותר. אפשר לעצור באמצע ולחזור, הטיוטה נשמרת בדפדפן הזה (בלי התמונות).</p></header>
+
+<form id="form" novalidate>
+<span class="bar" aria-hidden="true"></span>
+<section>
+  <h2>1. מי אתם</h2>
+  <div class="field"><label for="order">מספר הזמנה</label><input type="text" id="order" inputmode="numeric" autocomplete="off"><span class="hint">מופיע בקישור שקיבלתם. אם הוא ריק, כתבו את מה שנשלח אליכם.</span></div>
+  <div class="field"><label for="cname">השם שלכם</label><input type="text" id="cname" autocomplete="name"></div>
+  <div class="field"><span class="legend">סוג הספר</span>
+    <div class="choices" role="radiogroup" aria-label="סוג הספר">
+      <div class="choice"><input type="radio" name="line" id="l1" value="תודה"><label for="l1">תודה</label></div>
+      <div class="choice"><input type="radio" name="line" id="l2" value="אהבה"><label for="l2">אהבה</label></div>
+      <div class="choice"><input type="radio" name="line" id="l3" value="משפחה"><label for="l3">משפחה</label></div>
+    </div></div>
+</section>
+
+<span class="bar" aria-hidden="true"></span>
+<section>
+  <h2>2. הדמויות והתמונות</h2>
+  <p class="lead">לכל דמות: תמונת פנים ברורה וטבעית, ותמונה אחת שרואים בה את הגוף. בלי משקפי שמש ובלי פילטרים. התמונות משמשות רק להכנת האיורים ונמחקות בסיום ההפקה.</p>
+  <div id="chars"></div>
+  <button type="button" class="btn ghost small" id="addChar">הוספת דמות (מעבר לשתיים: 39 ש״ח לכל אחת)</button>
+</section>
+
+<span class="bar" aria-hidden="true"></span>
+<section>
+  <h2>3. הסיפור</h2>
+  <div class="voice"><b>מעדיפים לדבר במקום לכתוב?</b><br>שלחו הקלטה קולית של 3 עד 5 דקות בוואטסאפ, ככה יוצאים הפרטים הכי טובים. סמנו כאן ואפשר לדלג על השאלות.
+    <div class="check"><input type="checkbox" id="voice"><label for="voice" style="font-weight:400">אשלח הקלטה קולית בוואטסאפ במקום לכתוב</label></div></div>
+  <div id="qs"></div>
+</section>
+
+<span class="bar" aria-hidden="true"></span>
+<section>
+  <h2>4. האווירה</h2>
+  <div class="field"><span class="legend">טון הסיפור</span>
+    <div class="choices" role="radiogroup" aria-label="טון">
+      <div class="choice"><input type="radio" name="tone" id="t1" value="מצחיק"><label for="t1">מצחיק</label></div>
+      <div class="choice"><input type="radio" name="tone" id="t2" value="מרגש"><label for="t2">מרגש</label></div>
+      <div class="choice"><input type="radio" name="tone" id="t3" value="שילוב"><label for="t3">שילוב</label></div>
+    </div></div>
+  <div class="field"><label for="dedication">הקדשה (לא חובה)</label><textarea id="dedication" placeholder="כמה מילים שיופיעו בעמוד האחרון"></textarea></div>
+  <div class="field"><label for="avoid">מה לא לכלול?</label><textarea id="avoid" placeholder="נושא רגיש, פרט שמביך, דבר שלא רוצים שיופיע בספר"></textarea><span class="hint">אנחנו כותבים רק מה שסיפרתם, ולא ממציאים עובדות על האנשים.</span></div>
+</section>
+
+<span class="bar" aria-hidden="true"></span>
+<div class="check"><input type="checkbox" id="consent"><label for="consent">יש לי אישור להשתמש בתמונות ובפרטים של האנשים שבספר.</label></div>
+<input type="text" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+<button type="button" class="btn" id="send">שליחה</button>
+<div class="status" id="status" role="status"></div>
+</form>
+
+<div class="done" id="done" hidden>
+  <h1>קיבלנו, תודה!</h1>
+  <p class="lead">אני עוברת על הכל וחוזרת אליכם בוואטסאפ עם כיוון עלילה בשלוש שורות, לאישור, לפני שמתחילים בטיוטה. אם יש משהו שנשכח, אפשר לשלוח בוואטסאפ.</p>
+</div>
+</div>
+
+<script>
+(function(){
+  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzPmQh5xQ8qxsZ8nbKefd9BK188Abw25yx2C8t7xrqy7LwY0lcm_efcXIiAoqYudZ_pvg/exec";
+  var KEY="pikoo-story-v1", MAXPX=1400;
+  var $=function(s){return document.querySelector(s)};
+  var chars=[{name:"",role:"",looks:"",face:null,body:null},{name:"",role:"",looks:"",face:null,body:null}];
+  var answers={};
+  var COMMON=[
+    ["saying","משפט שהם תמיד אומרים","המילים המדויקות, גם אם הן מצחיקות."],
+    ["moment","רגע אחד ספציפי שאתם זוכרים","מי היה שם, איפה זה קרה, מה בדיוק נאמר. רגע אחד מדויק שווה יותר מעשרה תיאורים כלליים."],
+    ["funny","משהו מצחיק שקרה","פדיחה, בדיחה פנימית, הרגל משעשע."],
+    ["unique","מה הם עושים שאף אחד אחר לא עושה?","לא ״מקסימים״, אלא מה בדיוק הם עושים שהופך אותם לכאלה."],
+    ["visual","פרטים שרואים","בגד או צבע אהוב, משקפיים, תסרוקת, חפץ שתמיד איתם. מזה בונים את האיורים."]
+  ];
+  var BY={
+    "תודה":[["helped","במה עזרו לילד שלכם או לכם?","סיפור אחד אמיתי."],["kids","ילדים או אנשים נוספים שירצו להופיע בסיפור","שמות, ומשהו קטן על כל אחד."],["time","כמה זמן אתם ביחד, ומה השתנה בתקופה הזאת?",""]],
+    "אהבה":[["met","איך הכרתם?","הגרסה האמיתית. מה שלא רוצים שיופיע, כתבו בשדה ״מה לא לכלול״."],["knew","הרגע שבו ידעת",""],["inside","בדיחה פנימית או מילה שרק שניכם מבינים",""],["place","מקום שהוא ״שלכם״",""]],
+    "משפחה":[["oldstory","סיפור מהעבר שמספרים שוב ושוב",""],["learned","מה למדתם מהם?",""],["tradition","מסורת משפחתית (ארוחת שישי, מאכל, שיר)",""],["grandkids","נכדים או ילדים שיופיעו בספר","שמות, גילאים ומשהו על כל אחד."]]
+  };
+  function esc(s){return String(s||"").replace(/[&<>"]/g,function(m){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
+  function line(){var r=document.querySelector('input[name=line]:checked');return r?r.value:""}
+  function status(t,k){var s=$("#status");s.textContent=t;s.className="status"+(k?" "+k:"")}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify({order:$("#order").value,cname:$("#cname").value,line:line(),tone:(document.querySelector('input[name=tone]:checked')||{}).value||"",dedication:$("#dedication").value,avoid:$("#avoid").value,voice:$("#voice").checked,answers:answers,chars:chars.map(function(c){return{name:c.name,role:c.role,looks:c.looks}})}))}catch(e){}}
+  function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||"null");if(!d)return;$("#order").value=d.order||"";$("#cname").value=d.cname||"";$("#dedication").value=d.dedication||"";$("#avoid").value=d.avoid||"";$("#voice").checked=!!d.voice;answers=d.answers||{};if(d.chars&&d.chars.length)chars=d.chars.map(function(c){return{name:c.name,role:c.role,looks:c.looks,face:null,body:null}});
+    if(d.line){var r=document.querySelector('input[name=line][value="'+d.line+'"]');if(r)r.checked=true}
+    if(d.tone){var t=document.querySelector('input[name=tone][value="'+d.tone+'"]');if(t)t.checked=true}}catch(e){}}
+  function resize(file){return new Promise(function(res,rej){
+    var img=new Image(),u=URL.createObjectURL(file);
+    img.onload=function(){var w=img.width,h=img.height,k=Math.min(1,MAXPX/Math.max(w,h));var c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(h*k);c.getContext("2d").drawImage(img,0,0,c.width,c.height);URL.revokeObjectURL(u);res(c.toDataURL("image/jpeg",0.82))};
+    img.onerror=function(){URL.revokeObjectURL(u);rej(new Error("img"))};img.src=u})}
+  function renderChars(){
+    var box=$("#chars");box.innerHTML="";
+    chars.forEach(function(c,i){
+      var d=document.createElement("div");d.className="char";
+      d.innerHTML='<h3><span>דמות '+(i+1)+'</span>'+(chars.length>1?'<button type="button" class="btn ghost small" data-rm="'+i+'">הסרה</button>':'')+'</h3>'+
+      '<div class="field"><label for="cn'+i+'">שם (כמו שיופיע בספר)</label><input type="text" id="cn'+i+'" data-c="'+i+'" data-k="name" value="'+esc(c.name)+'"></div>'+
+      '<div class="field"><label for="cr'+i+'">מי זה/זו?</label><input type="text" id="cr'+i+'" data-c="'+i+'" data-k="role" placeholder="גננת, סבא, בן זוג..." value="'+esc(c.role)+'"></div>'+
+      '<div class="field"><label for="cl'+i+'">איך הם נראים?</label><input type="text" id="cl'+i+'" data-c="'+i+'" data-k="looks" placeholder="שיער ארוך שחור, עגילי חישוק, תמיד בז׳קט שחור" value="'+esc(c.looks)+'"></div>'+
+      '<div class="photos">'+
+      ['face','body'].map(function(k){return '<label class="drop"><span class="'+k+'-t"><b>'+(k==="face"?"תמונת פנים":"תמונה עם גוף")+'</b><br>לחיצה לבחירה</span><input type="file" accept="image/*" data-p="'+i+'" data-pk="'+k+'">'+(c[k]?'<img alt="" src="'+c[k]+'">':'')+'</label>'}).join('')+
+      '</div>';
+      box.appendChild(d)});
+    box.querySelectorAll("[data-c]").forEach(function(el){el.oninput=function(){chars[+el.dataset.c][el.dataset.k]=el.value;save()}});
+    box.querySelectorAll("[data-rm]").forEach(function(b){b.onclick=function(){chars.splice(+b.dataset.rm,1);renderChars();save()}});
+    box.querySelectorAll("[data-p]").forEach(function(el){el.onchange=function(){var f=el.files&&el.files[0];if(!f)return;status("מכווצים את התמונה...");resize(f).then(function(u){chars[+el.dataset.p][el.dataset.pk]=u;status("");renderChars()}).catch(function(){status("אי אפשר לקרוא את התמונה הזאת. נסו תמונה אחרת.","bad")})}})}
+  function renderQs(){
+    var box=$("#qs");box.innerHTML="";
+    var l=line();var list=COMMON.concat(l?BY[l]:[]);
+    if(!l){var p=document.createElement("p");p.className="hint";p.textContent="בחרו סוג ספר למעלה כדי לראות את כל השאלות.";box.appendChild(p)}
+    list.forEach(function(q){var d=document.createElement("div");d.className="q field";d.innerHTML='<label for="q_'+q[0]+'">'+esc(q[1])+'</label>'+(q[2]?'<span class="hint">'+esc(q[2])+'</span>':'')+'<textarea id="q_'+q[0]+'" data-q="'+q[0]+'" data-qt="'+esc(q[1])+'">'+esc(answers[q[0]]||"")+'</textarea>';box.appendChild(d)});
+    box.querySelectorAll("[data-q]").forEach(function(el){el.oninput=function(){answers[el.dataset.q]=el.value;save()}})}
+  function check(){
+    var bad=[];
+    if(!$("#order").value.trim())bad.push("מספר הזמנה");
+    if(!$("#cname").value.trim())bad.push("השם שלכם");
+    if(!line())bad.push("סוג ספר");
+    if(!chars.some(function(c){return c.name.trim()}))bad.push("שם לדמות אחת לפחות");
+    chars.forEach(function(c,i){if(c.name.trim()&&!c.face)bad.push("תמונת פנים ל"+c.name.trim())});
+    if(!$("#consent").checked)bad.push("אישור שימוש בתמונות");
+    return bad}
+  $("#addChar").onclick=function(){if(chars.length>=5){status("אפשר עד 5 דמויות. יותר מזה, כתבו לנו בוואטסאפ.","bad");return}chars.push({name:"",role:"",looks:"",face:null,body:null});renderChars()};
+  document.querySelectorAll("input[name=line]").forEach(function(r){r.onchange=function(){renderQs();save()}});
+  ["order","cname","dedication","avoid"].forEach(function(id){$("#"+id).oninput=save});
+  document.querySelectorAll("input[name=tone]").forEach(function(r){r.onchange=save});
+  $("#voice").onchange=save;
+  $("#send").onclick=function(){
+    var bad=check();if(bad.length){status("חסר: "+bad.join(", "),"bad");return}
+    if(!SCRIPT_URL){status("השליחה אינה פעילה כרגע. שלחו בוואטסאפ.","bad");return}
+    var b=$("#send");b.disabled=true;status("שולחים... זה יכול לקחת כמה שניות עם תמונות.");
+    var qa=[];var l=line();COMMON.concat(l?BY[l]:[]).forEach(function(q){var v=(answers[q[0]]||"").trim();if(v)qa.push({q:q[1],a:v})});
+    var d={type:"story",order:$("#order").value.trim(),name:$("#cname").value.trim(),line:l,tone:(document.querySelector('input[name=tone]:checked')||{}).value||"",dedication:$("#dedication").value.trim(),avoid:$("#avoid").value.trim(),voice:$("#voice").checked,qa:qa,website:$("#website").value,
+      chars:chars.filter(function(c){return c.name.trim()}).map(function(c){return{name:c.name.trim(),role:c.role.trim(),looks:c.looks.trim(),face:c.face,body:c.body}})};
+    fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})
+      .then(function(){try{localStorage.removeItem(KEY)}catch(e){}$("#form").hidden=true;$("#done").hidden=false;window.scrollTo(0,0)})
+      .catch(function(){b.disabled=false;status("השליחה נכשלה. נסו שוב, או שלחו בוואטסאפ.","bad")})};
+  var qs=new URLSearchParams(location.search);
+  load();
+  if(qs.get("order"))$("#order").value=qs.get("order");
+  if(qs.get("type")){var r=document.querySelector('input[name=line][value="'+qs.get("type")+'"]');if(r)r.checked=true}
+  renderChars();renderQs();
+})();
+</script>
+</body>
+</html>
