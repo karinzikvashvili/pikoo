@@ -36,6 +36,7 @@ fbq('init','1122819817273491');fbq('track','PageView');
 :root[data-theme="dark"]{
   --bg:#171A2B; --paper:#20243A; --ink:#F2EBDD; --muted:#AEB4C8; --line:#343A58;
   --accent:#B3A6E8; --accent-ink:#171A2B; --gold:#E0A55A; --soft:#2A2842; --warn:#F0A090; color-scheme:dark}
+.hp{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;opacity:0;pointer-events:none}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.65;direction:rtl;
@@ -299,7 +300,7 @@ footer .mark{font-size:34px}
           </div>
           <div class="field"><label for="deadline">עד מתי צריך אותו?</label><input type="date" id="deadline"><span class="hint">נאשר מולכם אם התאריך אפשרי.</span></div>
         </div>
-        <div class="grid2"><div class="field"><label for="cname">שם</label><input type="text" id="cname" autocomplete="name"></div><div class="field"><label for="phone">וואטסאפ</label><input type="tel" id="phone" autocomplete="tel" placeholder="050-0000000" dir="ltr"></div></div><input type="text" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+        <div class="grid2"><div class="field"><label for="cname">שם</label><input type="text" id="cname" autocomplete="name"></div><div class="field"><label for="phone">וואטסאפ</label><input type="tel" id="phone" autocomplete="tel" placeholder="050-0000000" dir="ltr"></div></div><input type="text" id="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
         <div class="grid2">
           <div class="field"><label for="copies">כמה עותקים מודפסים?</label><input type="text" id="copies" placeholder="1"><span class="hint">3 עותקים הם חבילת ועד.</span></div>
           <div class="field"><label for="address">כתובת למשלוח</label><input type="text" id="address" placeholder="לספר מודפס בישראל בלבד"><span class="hint">לספר דיגיטלי אפשר להשאיר ריק.</span></div>
