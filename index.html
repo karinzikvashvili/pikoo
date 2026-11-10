@@ -44,6 +44,7 @@ section{padding-block:44px}
 .proof{display:grid;gap:14px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .gallery img{border-radius:10px;aspect-ratio:4/3;object-fit:cover;width:100%}
+@media(max-width:759px){.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px}.gallery img{flex:0 0 84%;scroll-snap-align:center}}
 .quote{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px}
 .quote q{display:block;font-size:20px;font-weight:700}
 .quote small{color:var(--muted)}
