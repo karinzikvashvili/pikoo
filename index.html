@@ -11,6 +11,10 @@
 <!-- og:image needs the final absolute address, for example https://YOUR-DOMAIN/og.jpg -->
 <meta property="og:image" content="https://karinzikvashvili.github.io/pikoo/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1122819817273491');fbq('track','PageView');
+</script>
 </head>
 <body style="margin:0">
 <title>פיקו Pikoo ספרים אישיים</title>
@@ -331,6 +335,7 @@ footer .mark{font-size:34px}
       <span class="bar" aria-hidden="true"></span>
       <h2 id="h-priv">פרטיות</h2>
       <details><summary>מה נאסף ולמה</summary><p>שם, מספר וואטסאפ ופרטי ההזמנה שמילאתם בטופס (סוג ספר, אירוע, שמות הגיבורים, פורמט וכתובת למשלוח של ספר מודפס), ובהמשך תמונות של האנשים שבספר אם שלחתם. המידע משמש רק ליצירת קשר, להכנת הספר, למשלוח ולטיפול בתשלום.</p></details>
+      <details><summary>קובצי מעקב ופרסום</summary><p>באתר פועל פיקסל של Meta (פייסבוק ואינסטגרם). הוא מזהה שביקרתם בדף ושלחתם הזמנה, כדי למדוד אם הפרסום עובד ולהציג מודעות רלוונטיות. הוא לא מקבל את תוכן הטופס. אפשר לחסום מעקב בהגדרות הדפדפן או בהגדרות המודעות של חשבון הפייסבוק או האינסטגרם שלכם.</p></details>
       <details><summary>איפה זה נשמר ומי רואה</summary><p>בגיליון פרטי ובתיבת מייל של פיקו, בגישת בעלת העסק בלבד. להכנת האיורים אנחנו משתמשים בכלי עיצוב ובינה מלאכותית (Canva). התמונות משמשות להכנת האיורים בלבד ונמחקות בסיום ההפקה. המידע לא נמסר לאחרים, חוץ ממה שנדרש לבית דפוס ולשירות משלוחים בשביל להפיק ולשלוח את הספר.</p></details>
       <details><summary>הזכויות שלכם</summary><p>אפשר לבקש לראות, לתקן או למחוק את המידע שלכם בוואטסאפ <bdi dir="ltr">052-733-9065</bdi>.</p></details>
     </section>
@@ -381,7 +386,7 @@ footer .mark{font-size:34px}
     var b=$("#send"); b.disabled=true; say("שולחים...");
     var d={line:radio("line"),occasion:val("occasion"),giver:val("giver"),heroes:val("heroes"),fmt:radio("fmt"),deadline:val("deadline"),name:val("cname"),phone:val("phone"),copies:val("copies"),address:val("address"),website:val("website")};
     fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})
-      .then(function(){say("ההזמנה התקבלה. נחזור אליכם בוואטסאפ עם המשך ופרטי תשלום.");show()})
+      .then(function(){if(window.fbq)fbq('track','Lead');say("ההזמנה התקבלה. נחזור אליכם בוואטסאפ עם המשך ופרטי תשלום.");show()})
       .catch(function(){b.disabled=false;say("השליחה נכשלה. אפשר לשלוח בוואטסאפ במקום.",true)});
   };
   $("#wa").onclick=function(){
