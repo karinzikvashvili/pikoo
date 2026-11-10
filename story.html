@@ -117,10 +117,6 @@ input:focus,textarea:focus,select:focus{outline:3px solid var(--accent);outline-
 <script>
 (function(){
   var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzPmQh5xQ8qxsZ8nbKefd9BK188Abw25yx2C8t7xrqy7LwY0lcm_efcXIiAoqYudZ_pvg/exec";
-    var NT=false;try{if(location.search.indexOf("nt=1")>-1)localStorage.setItem("pikoo_nt","1");NT=localStorage.getItem("pikoo_nt")==="1"}catch(e){}
-  var SID;try{SID=sessionStorage.getItem("pk_sid")||Math.random().toString(36).slice(2,10);sessionStorage.setItem("pk_sid",SID)}catch(e){SID=Math.random().toString(36).slice(2,10)}
-  function track(ev,label){if(NT||!SCRIPT_URL)return;try{fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",keepalive:true,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({type:"event",sid:SID,event:ev,label:String(label||""),src:"story",camp:"",path:"story"})})}catch(e){}}
-  track("story_view");
   var KEY="pikoo-story-v1", MAXPX=1400;
   var $=function(s){return document.querySelector(s)};
   var chars=[{name:"",role:"",looks:"",face:null,body:null},{name:"",role:"",looks:"",face:null,body:null}];
@@ -191,7 +187,7 @@ input:focus,textarea:focus,select:focus{outline:3px solid var(--accent);outline-
     var d={type:"story",order:$("#order").value.trim(),name:$("#cname").value.trim(),line:l,tone:(document.querySelector('input[name=tone]:checked')||{}).value||"",dedication:$("#dedication").value.trim(),avoid:$("#avoid").value.trim(),voice:$("#voice").checked,qa:qa,website:$("#website").value,
       chars:chars.filter(function(c){return c.name.trim()}).map(function(c){return{name:c.name.trim(),role:c.role.trim(),looks:c.looks.trim(),face:c.face,body:c.body}})};
     fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})
-      .then(function(){track("story_submit");try{localStorage.removeItem(KEY)}catch(e){}$("#form").hidden=true;$("#done").hidden=false;window.scrollTo(0,0)})
+      .then(function(){try{localStorage.removeItem(KEY)}catch(e){}$("#form").hidden=true;$("#done").hidden=false;window.scrollTo(0,0)})
       .catch(function(){b.disabled=false;status("השליחה נכשלה. נסו שוב, או שלחו בוואטסאפ.","bad")})};
   var qs=new URLSearchParams(location.search);
   load();

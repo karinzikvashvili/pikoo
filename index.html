@@ -46,7 +46,6 @@ section{padding-block:44px}
 .gallery img{border-radius:10px;width:100%;height:auto}
 @media(max-width:759px){.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px}.gallery img{flex:0 0 84%;scroll-snap-align:center}}
 .more{display:grid;gap:26px;margin-top:16px}.gallery.four{grid-template-columns:repeat(4,1fr)}@media(max-width:759px){.gallery.four{display:flex}}
-.trio{display:grid;gap:12px;margin-top:16px}.trio>div{background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px}.trio p{color:var(--muted);font-size:16px;margin-top:4px}@media(min-width:760px){.trio{grid-template-columns:repeat(3,1fr)}}.photo{border-radius:14px;width:100%;height:auto}
 .quote{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px}
 .quote q{display:block;font-size:20px;font-weight:700}
 .quote small{color:var(--muted)}
@@ -104,7 +103,7 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
 <section class="hero">
   <div>
     <h1>תפסיקו לקנות מתנות שנשכחות במגירה</h1>
-    <p class="lead" style="margin-top:14px">ספר מאויר שכולו הוא: הבדיחות הפנימיות, המקומות, והמשפט שהוא תמיד אומר. נבנה ממה שתספרו לי, עם הדמויות האמיתיות בתוכו.</p>
+    <p class="lead" style="margin-top:14px">ספר מאויר שכולו הוא: הבדיחות הפנימיות שלכם, המקומות שלכם, והמשפט שהוא תמיד אומר. כל פרט נלקח ממה שאתם מספרים לי, עם הדמויות האמיתיות בתוכו, ולא מתבנית שמחליפים בה שם.</p>
     <div class="offer" style="margin-top:16px">
       <span>דיגיטלי 89 ₪<s>159</s></span>
       <span>מודפס 199 ₪<s>329</s></span>
@@ -117,10 +116,10 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
 <section aria-labelledby="h-pain">
   <span class="bar" aria-hidden="true"></span>
   <h2 id="h-pain">למה מתנות רגילות לא נוגעות</h2>
-  <div class="trio">
-    <div><h3>מתנה רגילה נעלמת</h3><p>שעון, בושם, גרביים: תודה, ובמגירה.</p></div>
-    <div><h3>אין זמן ואין מילים</h3><p>אתם מספרים, ואני הופכת את זה לספר.</p></div>
-    <div><h3>החשש שזה יצא גנרי</h3><p>כל משפט נלקח ממה שסיפרתם. לא ממציאה עובדות.</p></div>
+  <div class="steps" style="margin-top:16px">
+    <div class="step"><b>1</b><div><h3>קונים, מקבלים תודה, וזה נעלם</h3><p>שעון, בושם, גרביים. הוא יגיד תודה ויניח במגירה. ספר שכולו הוא, עם הרגע שרק שניכם זוכרים, לא מניחים במגירה.</p></div></div>
+    <div class="step"><b>2</b><div><h3>אין זמן, ואין מילים</h3><p>את יודעת בדיוק מה אוהבים בו, אבל להפוך את זה לטקסט וציורים לוקח שבועות. אתם מספרים, ואני עושה את הכל.</p></div></div>
+    <div class="step"><b>3</b><div><h3>החשש שזה יצא גנרי</h3><p>בדיוק בגלל זה כל משפט בספר נלקח ממה שסיפרתם: משפט שהוא באמת אומר, מקום שבאמת הייתם בו. אני לא ממציאה עובדות על האנשים בספר.</p></div></div>
   </div>
 </section>
 
@@ -134,7 +133,6 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
     <img src="img/end.jpg" alt="עמוד מהספר: הסוף, עם הספר בידיים" loading="lazy" width="900" height="675">
   </div>
   <p class="hint">הדמויות הן איור שמזכיר את האנשים האמיתיים, לא העתק שלהם ברמת הפרטים הקטנים. אם משהו בולט לא מתאים, אומרים ומתקנים.</p>
-  <img class="photo" src="img/printed.jpg" alt="הספר המודפס בכריכה קשה" loading="lazy" width="900" height="467">
   <div class="quote">
     <q>״אין מילים. כמה יפה ומרגש. תודה רבה רבה אהובים, מזכרת מדהימה לעד.״</q>
     <small>מורן, גננת, על הספר שהכנו לגננות בסוף השנה. ההודעה הגיעה ב-30 ביוני 2025.</small>
@@ -165,10 +163,10 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
   <span class="bar" aria-hidden="true"></span>
   <h2 id="h-how">ארבעה צעדים, ואתם לא כותבים כלום בעצמכם</h2>
   <div class="steps" style="margin-top:16px">
-    <div class="step"><b>1</b><div><h3>הזמנה של שתי דקות</h3><p>סוג ספר, שם וטלפון.</p></div></div>
-    <div class="step"><b>2</b><div><h3>תשלום</h3><p>אני שולחת פרטים בוואטסאפ.</p></div></div>
-    <div class="step"><b>3</b><div><h3>הסיפור והתמונות</h3><p>אחרי התשלום, קישור אישי: תמונות ושאלות, בכתב או בהקלטה.</p></div></div>
-    <div class="step"><b>4</b><div><h3>אישור והפקה</h3><p>כיוון עלילה וטיוטה, שני סבבי תיקונים, ורק אז מפיקים.</p></div></div>
+    <div class="step"><b>1</b><div><h3>הזמנה של שתי דקות</h3><p>סוג הספר, שם וטלפון. בלי תמונות ובלי שאלון ארוך בשלב הזה.</p></div></div>
+    <div class="step"><b>2</b><div><h3>תשלום</h3><p>אחרי ההזמנה אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.</p></div></div>
+    <div class="step"><b>3</b><div><h3>מספרים לנו את הסיפור</h3><p>אחרי התשלום אני שולחת קישור אישי: מעלים תמונת פנים ותמונה עם גוף לכל דמות, ועונים על כמה שאלות, בכתב או בהקלטה קולית.</p></div></div>
+    <div class="step"><b>4</b><div><h3>מאשרים, ואז מקבלים</h3><p>קודם כיוון עלילה בשלוש שורות, ואחר כך טיוטה לאישור, עם שני סבבי תיקונים כלולים. רק אחרי זה מפיקים את הספר.</p></div></div>
   </div>
 </section>
 
@@ -236,7 +234,7 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
   <details><summary>כמה תיקונים כלולים?</summary><p>שני סבבי תיקונים. בכל סבב אתם אומרים מה לשנות, ואני מתקנת.</p></details>
   <details><summary>לאן אפשר לשלוח?</summary><p>ספר מודפס נשלח לכתובות בישראל בלבד. ספר דיגיטלי אפשר להזמין מכל מקום בעולם.</p></details>
   <details><summary>אפשר להחזיר?</summary><p>ספר הוא מוצר בהתאמה אישית, ולכן אין החזרות אחרי אישור הטיוטה, חוץ מפגם בהדפסה.</p></details>
-  <details><summary>מה קורה עם התמונות שלנו?</summary><p>שם, טלפון ופרטי ההזמנה נשמרים בגיליון פרטי ובמייל של פיקו, בגישת בעלת העסק בלבד. להכנת האיורים אני משתמשת בכלי עיצוב ובינה מלאכותית (Canva). התמונות משמשות רק להכנת האיורים ונמחקות בסיום ההפקה. המידע לא נמסר לאחרים, חוץ ממה שנדרש לבית דפוס ולשירות משלוחים. אנחנו שומרים גם נתוני ביקור אנונימיים (איזה דף נצפה, כמה גללו, על מה לחצו ומאיפה הגעתם), בלי שם ובלי פרטי הטופס. באתר פועל גם פיקסל של Meta למדידת צפיות ושליחת הטופס ולהערכת יעילות הפרסום; תוכן הטופס והתמונות אינם נשלחים אליו. אפשר לבקש לראות, לתקן או למחוק בוואטסאפ <bdi dir="ltr">052-733-9065</bdi>.</p></details>
+  <details><summary>מה קורה עם התמונות שלנו?</summary><p>שם, טלפון ופרטי ההזמנה נשמרים בגיליון פרטי ובמייל של פיקו, בגישת בעלת העסק בלבד. להכנת האיורים אני משתמשת בכלי עיצוב ובינה מלאכותית (Canva). התמונות משמשות רק להכנת האיורים ונמחקות בסיום ההפקה. המידע לא נמסר לאחרים, חוץ ממה שנדרש לבית דפוס ולשירות משלוחים. אפשר לבקש לראות, לתקן או למחוק בוואטסאפ <bdi dir="ltr">052-733-9065</bdi>.</p></details>
 </section>
 </main>
 <footer>פיקו (Pikoo). ספרים מאוירים אישיים מפרטים אמיתיים. וואטסאפ וטלפון: <bdi dir="ltr">052-733-9065</bdi></footer>
@@ -248,24 +246,6 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
 (function(){
   var SCRIPT_URL="https://script.google.com/macros/s/AKfycbzPmQh5xQ8qxsZ8nbKefd9BK188Abw25yx2C8t7xrqy7LwY0lcm_efcXIiAoqYudZ_pvg/exec", WA="972527339065";
   var $=function(s){return document.querySelector(s)};
-  var PIXEL_ID="1122819817273491";
-  var NT=false;try{if(location.search.indexOf("nt=1")>-1)localStorage.setItem("pikoo_nt","1");NT=localStorage.getItem("pikoo_nt")==="1"}catch(e){}
-  var QS=new URLSearchParams(location.search),SRC=QS.get("utm_source")||"",CAMP=QS.get("utm_campaign")||"";
-  if(!SRC){try{SRC=document.referrer?new URL(document.referrer).hostname:"direct"}catch(e){SRC="direct"}}
-  var SID;try{SID=sessionStorage.getItem("pk_sid");if(!SID){SID=Math.random().toString(36).slice(2,10);sessionStorage.setItem("pk_sid",SID)}}catch(e){SID=Math.random().toString(36).slice(2,10)}
-  function track(ev,label){
-    if(NT||!SCRIPT_URL)return;
-    try{fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",keepalive:true,headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({type:"event",sid:SID,event:ev,label:String(label||""),src:SRC,camp:CAMP,path:(location.pathname.split("/").pop()||"index")})})}catch(e){}
-    try{if(window.fbq&&ev==="form_submit")fbq("track","Lead")}catch(e){}
-  }
-  if(PIXEL_ID&&!NT){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL_ID);fbq("track","PageView")}
-  track("view");
-  var depth={50:0,100:0};
-  function onScroll(){var h=document.documentElement.scrollHeight-innerHeight,p=h>0?scrollY/h*100:0;[50,100].forEach(function(t){if(!depth[t]&&p>=t-3){depth[t]=1;track("scroll",t)}})}
-  addEventListener("scroll",onScroll,{passive:true});
-  document.querySelectorAll('a[href="#order"]').forEach(function(a){a.addEventListener("click",function(){track("cta_click",a.textContent.trim())})});
-  ["#wa","#wa2"].forEach(function(id){var e=$(id);if(e)e.addEventListener("click",function(){track("wa_click",id)})});
-  var started=0;$("#form").addEventListener("focusin",function(){if(!started){started=1;track("form_start")}});
   function radio(n){var r=document.querySelector('input[name="'+n+'"]:checked');return r?r.value:""}
   function status(t,k){var s=$("#status");s.textContent=t;s.className="status"+(k?" "+k:"")}
   function waLink(){var l=radio("line"),f=radio("fmt"),n=$("#cname").value.trim();
@@ -282,7 +262,7 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
     var d={line:radio("line"),fmt:radio("fmt"),name:$("#cname").value.trim(),phone:$("#phone").value.trim(),occasion:$("#note").value.trim(),heroes:$("#note").value.trim(),website:$("#website").value};
     if(!SCRIPT_URL){window.location.href=waLink();return}
     fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})
-      .then(function(){status("ההזמנה התקבלה! אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.","ok");track("form_submit",radio("line"))})
+      .then(function(){status("ההזמנה התקבלה! אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.","ok")})
       .catch(function(){btn.disabled=false;status("השליחה נכשלה. אפשר לדבר איתי בוואטסאפ במקום.","bad")})};
 })();
 </script>
