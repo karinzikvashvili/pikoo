@@ -8,7 +8,7 @@
 <style>
 :root{--bg:#FBF6EC;--paper:#fff;--ink:#1F2A44;--muted:#5B6379;--line:#E6DCC8;--accent:#6B5CA5;--accent-ink:#fff;--gold:#C98B3C;--soft:#F1ECF8;--warn:#9A3B2E;--ok:#2F7D5B}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171A2B;--paper:#20243A;--ink:#F2EBDD;--muted:#AEB4C8;--line:#343A58;--accent:#B3A6E8;--accent-ink:#171A2B;--gold:#E0A55A;--soft:#2A2842;--warn:#F0A090;--ok:#6FCF9C;color-scheme:dark}}
-.hp{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;opacity:0;pointer-events:none}
+.hp,input.hp{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;border:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap;opacity:0;pointer-events:none;inset-inline-start:0;top:0}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Assistant",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;padding:0 16px 80px}
 .wrap{max-width:720px;margin:0 auto}
