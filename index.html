@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>פיקו Pikoo: ספר מאויר אישי</title>
-<meta name="description" content="ספר מאויר על מי שאוהבים, שנכתב מפרטים שרק אתם מכירים. עם הדמויות האמיתיות בתוכו. מבצע עד 14.11: דיגיטלי 89 ₪, מודפס 199 ₪.">
+<meta name="description" content="ספר מאויר על מי שאוהבים, שנכתב מפרטים שרק אתם מכירים. עם הדמויות האמיתיות בתוכו. מבצע לזמן מוגבל: דיגיטלי 89 ₪, מודפס 199 ₪.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="פיקו Pikoo: ספר מאויר אישי">
@@ -96,7 +96,7 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
 </head>
 <body>
 <div class="wrap">
-<div class="top"><a class="mark" href="#top">Pikoo.</a><span class="pill" id="pill">מבצע עד 14.11</span></div>
+<div class="top"><a class="mark" href="#top">Pikoo.</a><span class="pill" id="pill">מבצע לזמן מוגבל</span></div>
 
 <main id="top">
 <section class="hero">
@@ -104,11 +104,10 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
     <h1>תפסיקו לקנות מתנות שנשכחות במגירה</h1>
     <p class="lead" style="margin-top:14px">ספר מאויר שכולו הוא: הבדיחות הפנימיות שלכם, המקומות שלכם, והמשפט שהוא תמיד אומר. כל פרט נלקח ממה שאתם מספרים לי, עם הדמויות האמיתיות בתוכו, ולא מתבנית שמחליפים בה שם.</p>
     <div class="offer" style="margin-top:16px">
-      <span>דיגיטלי 89 ₪<s>149</s></span>
-      <span>מודפס 199 ₪<s>399</s></span>
+      <span>דיגיטלי 89 ₪<s>159</s></span>
+      <span>מודפס 199 ₪<s>329</s></span>
     </div>
-    <p class="count" id="count" style="margin-top:10px"></p>
-    <div class="cta"><a class="btn" href="#order">אני רוצה ספר כזה</a><a class="btn ghost" href="#sample">לראות ספר לדוגמה</a></div>
+        <div class="cta"><a class="btn" href="#order">אני רוצה ספר כזה</a><a class="btn ghost" href="#sample">לראות ספר לדוגמה</a></div>
   </div>
   <img class="cover" src="img/cover.jpg" alt="כריכת ספר לדוגמה: חיפוש אוצר ליום ההולדת" width="900" height="675" fetchpriority="high">
 </section>
@@ -160,16 +159,16 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
   <div class="cards" style="margin-top:18px">
     <div class="card rec"><span class="tag">הכי מתאים למתנה</span>
       <h3>ספר מודפס</h3>
-      <div class="price">199 ₪<s>399 ₪</s></div>
+      <div class="price">199 ₪<s>329 ₪</s></div>
       <ul><li>כריכה קשה, 30x20 ס״מ, 24 עמודי סיפור</li><li>כולל קובץ PDF, משלוח לישראל</li><li>עד שתי דמויות, עד 10 ימי עסקים</li></ul>
     </div>
     <div class="card">
       <h3>ספר דיגיטלי</h3>
-      <div class="price">89 ₪<s>149 ₪</s></div>
+      <div class="price">89 ₪<s>159 ₪</s></div>
       <ul><li>קובץ PDF 30x20 ס״מ, במייל ובוואטסאפ</li><li>אפשר להדפיס בכל בית דפוס, מכל מקום בעולם</li><li>עד שתי דמויות, עד 3 ימי עסקים</li></ul>
     </div>
   </div>
-  <p class="extras">מחיר מבצע עד 14.11. רוצים יותר משתי דמויות, כמה עותקים או חבילת ועד? כתבו לי בוואטסאפ ואתן הצעה. המחירים סופיים וללא תוספת מע״מ.</p>
+  <p class="extras">מחיר מבצע לזמן מוגבל, אחריו המחירים הרגילים: 329 ₪ למודפס ו-159 ₪ לדיגיטלי. רוצים יותר משתי דמויות, כמה עותקים או חבילת ועד? כתבו לי בוואטסאפ ואתן הצעה. המחירים סופיים וללא תוספת מע״מ.</p>
 </section>
 
 <section id="order" aria-labelledby="h-order">
@@ -248,12 +247,6 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
     fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})
       .then(function(){status("ההזמנה התקבלה! אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.","ok")})
       .catch(function(){btn.disabled=false;status("השליחה נכשלה. אפשר לדבר איתי בוואטסאפ במקום.","bad")})};
-  var end=new Date("2026-11-14T23:59:59+02:00").getTime();
-  function tick(){var left=end-Date.now(),c=$("#count");
-    if(left<=0){c.textContent="";$("#pill").textContent="המבצע הסתיים";return}
-    var d=Math.floor(left/864e5),h=Math.floor(left%864e5/36e5);
-    c.textContent="המבצע נגמר ב-14.11. נשארו "+(d>0?d+" ימים ו-":"")+h+" שעות."}
-  tick();setInterval(tick,60000);
 })();
 </script>
 </body>
