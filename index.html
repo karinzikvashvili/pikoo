@@ -45,6 +45,7 @@ section{padding-block:44px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .gallery img{border-radius:10px;aspect-ratio:4/3;object-fit:cover;width:100%}
 @media(max-width:759px){.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px}.gallery img{flex:0 0 84%;scroll-snap-align:center}}
+.more{display:grid;gap:22px;margin-top:16px}.gallery.two{grid-template-columns:1fr 1fr}@media(max-width:759px){.gallery.two{display:flex}}
 .quote{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px}
 .quote q{display:block;font-size:20px;font-weight:700}
 .quote small{color:var(--muted)}
@@ -140,6 +141,22 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
     <video controls preload="none" playsinline poster="img/video-poster.jpg" aria-label="דפדוף בספר המודפס"><source src="pikoo-video.mp4" type="video/mp4"></video>
     <figcaption>דפדוף בספר המודפס, בכריכה קשה</figcaption>
   </figure>
+</section>
+
+<section aria-labelledby="h-more">
+  <span class="bar" aria-hidden="true"></span>
+  <h2 id="h-more">גם ספרי תודה ומשפחה</h2>
+  <p class="lead" style="margin-top:8px">שתי דוגמאות לסגנון של הקווים האחרים. הדמויות בהן בדיוניות, והן רק להמחשה.</p>
+  <div class="more">
+    <figure>
+      <div class="gallery two"><img src="img/s-a1.jpg" alt="דוגמה: גננת וילדים בגינה" loading="lazy" width="900" height="675"><img src="img/s-a2.jpg" alt="דוגמה: שעת סיפור בגן" loading="lazy" width="900" height="675"></div>
+      <figcaption><b>תודה:</b> ספר לגננת, מהרגעים הקטנים של היום-יום בגן. דוגמה בדיונית.</figcaption>
+    </figure>
+    <figure>
+      <div class="gallery two"><img src="img/s-b1.jpg" alt="דוגמה: ארוחת שישי אצל סבא וסבתא" loading="lazy" width="900" height="675"><img src="img/s-b2.jpg" alt="דוגמה: סבא מספר סיפור לנכדים" loading="lazy" width="900" height="675"></div>
+      <figcaption><b>משפחה:</b> ספר לסבא וסבתא, עם הסיפור שמספרים שוב ושוב. דוגמה בדיונית.</figcaption>
+    </figure>
+  </div>
 </section>
 
 <section aria-labelledby="h-how">
