@@ -45,6 +45,7 @@ section{padding-block:44px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .gallery img{border-radius:10px;aspect-ratio:4/3;object-fit:cover;width:100%}
 @media(max-width:759px){.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px}.gallery img{flex:0 0 84%;scroll-snap-align:center}}
+.more{display:grid;gap:26px;margin-top:16px}.gallery.four{grid-template-columns:repeat(4,1fr)}@media(max-width:759px){.gallery.four{display:flex}}
 .quote{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px}
 .quote q{display:block;font-size:20px;font-weight:700}
 .quote small{color:var(--muted)}
@@ -140,6 +141,22 @@ footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);fo
     <video controls preload="none" playsinline poster="img/video-poster.jpg" aria-label="דפדוף בספר המודפס"><source src="pikoo-video.mp4" type="video/mp4"></video>
     <figcaption>דפדוף בספר המודפס, בכריכה קשה</figcaption>
   </figure>
+</section>
+
+<section aria-labelledby="h-books">
+  <span class="bar" aria-hidden="true"></span>
+  <h2 id="h-books">ספרים שיצרתי</h2>
+  <p class="lead" style="margin-top:8px">עמודים מתוך ספרים אמיתיים, באיורים של פיקו. כל אחד נבנה מהפרטים של האנשים שבו.</p>
+  <div class="more">
+    <figure>
+      <div class="gallery four"><img src="img/t02.jpg" alt="מורן ורינת בג׳ונגל" loading="lazy" width="900" height="621"><img src="img/t05.jpg" alt="הילדים חוגגים" loading="lazy" width="900" height="621"><img src="img/t09.jpg" alt="גננת מחבקת ילדים" loading="lazy" width="900" height="621"><img src="img/t13.jpg" alt="ילד עם שתי הגננות" loading="lazy" width="900" height="621"></div>
+      <figcaption><b>הג׳ונגל שבגן:</b> ספר תודה לשתי גננות, מתוך ספר מודפס שהבאנו להן בסוף השנה.</figcaption>
+    </figure>
+    <figure>
+      <div class="gallery four"><img src="img/u01.jpg" alt="כריכה: אורי והרגשות האבודים" loading="lazy" width="900" height="621"><img src="img/u05.jpg" alt="עמוד מהספר" loading="lazy" width="900" height="621"><img src="img/u09.jpg" alt="עמוד מהספר" loading="lazy" width="900" height="621"><img src="img/u15.jpg" alt="עמוד מהספר" loading="lazy" width="900" height="621"></div>
+      <figcaption><b>אורי והרגשות האבודים:</b> ספר ילדים שיצרתי לבן שלי.</figcaption>
+    </figure>
+  </div>
 </section>
 
 <section aria-labelledby="h-how">
