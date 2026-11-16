@@ -3,267 +3,254 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>פיקו Pikoo: ספר מאויר אישי</title>
-<meta name="description" content="ספר מאויר על מי שאוהבים, שנכתב מפרטים שרק אתם מכירים. עם הדמויות האמיתיות בתוכו. מבצע לזמן מוגבל: דיגיטלי 89 ₪, מודפס 199 ₪.">
+<title>פיקו Pikoo: ספר מאויר אישי, מהסיפור והתמונות שלכם</title>
+<meta name="description" content="ספר מאויר אישי על מי שאוהבים, שנכתב מהפרטים שרק אתם מכירים, עם הדמויות האמיתיות בתוכו. דיגיטלי 89 ₪, מודפס בכריכה קשה 199 ₪.">
+<link rel="canonical" href="https://karinzikvashvili.github.io/pikoo/">
+<meta name="theme-color" content="#FBF6EC" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#171A2B" media="(prefers-color-scheme:dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="פיקו Pikoo">
+<meta property="og:url" content="https://karinzikvashvili.github.io/pikoo/">
 <meta property="og:title" content="פיקו Pikoo: ספר מאויר אישי">
 <meta property="og:description" content="ספר מאויר על מי שאוהבים, שנכתב מפרטים שרק אתם מכירים.">
 <meta property="og:image" content="https://karinzikvashvili.github.io/pikoo/og.jpg">
-<style>
-:root{--bg:#FBF6EC;--paper:#fff;--ink:#1F2A44;--muted:#5B6379;--line:#E6DCC8;--accent:#6B5CA5;--accent-ink:#fff;--gold:#C98B3C;--soft:#F1ECF8;--warn:#9A3B2E;--ok:#2F7D5B;--wa:#1FA855}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171A2B;--paper:#20243A;--ink:#F2EBDD;--muted:#AEB4C8;--line:#343A58;--accent:#B3A6E8;--accent-ink:#171A2B;--gold:#E0A55A;--soft:#2A2842;--warn:#F0A090;--ok:#6FCF9C;color-scheme:dark}}
-.hp,input.hp{position:absolute!important;width:1px!important;height:1px!important;margin:-1px!important;padding:0!important;border:0!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap;opacity:0;pointer-events:none;inset-inline-start:0;top:0}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 system-ui,-apple-system,"Segoe UI","Assistant",Arial,sans-serif;padding:0 16px 84px}
-img,video{max-width:100%;height:auto;display:block}
-.wrap{max-width:980px;margin:0 auto}
-h1,h2,h3{line-height:1.12;margin:0;font-weight:800;text-wrap:balance}
-h1{font-size:clamp(34px,8vw,58px)}
-h2{font-size:clamp(26px,5.4vw,38px)}
-h3{font-size:20px}
-p{margin:0}
-section{padding-block:44px}
-.bar{display:block;width:64px;height:5px;background:var(--gold);margin-bottom:16px}
-.lead{color:var(--muted);font-size:19px}
-.top{position:sticky;top:0;z-index:20;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
-.mark{font-weight:900;font-size:30px;color:var(--accent);direction:ltr;text-decoration:none}
-.pill{background:var(--gold);color:#fff;font-weight:800;font-size:14px;padding:6px 12px;border-radius:999px;white-space:nowrap}
-.btn{font:inherit;font-weight:800;display:inline-block;text-align:center;text-decoration:none;cursor:pointer;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);padding:14px 28px;border-radius:999px;font-size:18px}
-.btn.ghost{background:transparent;color:var(--accent)}
-.btn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
-.btn:disabled{opacity:.6;cursor:wait}
-.hero{display:grid;gap:22px;padding-block:26px 8px}
-.hero img.cover{border-radius:16px;box-shadow:0 14px 34px rgba(31,42,68,.22);width:100%;height:auto}
-.offer{display:flex;gap:10px;flex-wrap:wrap}
-.offer span{background:var(--soft);border-radius:12px;padding:8px 14px;font-weight:700}
-.offer s{color:var(--muted);font-weight:400;margin-inline-start:6px}
-.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.count{font-weight:800;color:var(--warn)}
-.proof{display:grid;gap:14px}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.gallery img{border-radius:10px;width:100%;height:auto}
-@media(max-width:759px){.gallery{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px}.gallery img{flex:0 0 84%;scroll-snap-align:center}}
-.more{display:grid;gap:26px;margin-top:16px}.gallery.four{grid-template-columns:repeat(4,1fr)}@media(max-width:759px){.gallery.four{display:flex}}
-.quote{background:var(--paper);border:1.5px solid var(--line);border-radius:16px;padding:16px 18px}
-.quote q{display:block;font-size:20px;font-weight:700}
-.quote small{color:var(--muted)}
-figure{margin:0}
-figcaption{color:var(--muted);font-size:15px;margin-top:6px}
-.steps{display:grid;gap:12px;counter-reset:s}
-.step{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px}
-.step b{flex:none;width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-size:18px}
-.step p{color:var(--muted);font-size:16px}
-.cards{display:grid;gap:14px}
-.card{background:var(--paper);border:2px solid var(--line);border-radius:18px;padding:18px}
-.card.rec{border-color:var(--accent);position:relative}
-.card .tag{position:absolute;top:-13px;inset-inline-start:16px;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px}
-.price{font-size:42px;font-weight:900;line-height:1;margin:8px 0}
-.price s{font-size:20px;color:var(--muted);font-weight:400;margin-inline-start:8px}
-.card ul{margin:8px 0 0;padding-inline-start:20px;color:var(--muted);font-size:16px}
-.extras{margin-top:12px;color:var(--muted);font-size:16px}
-.form{background:var(--paper);border:2px solid var(--accent);border-radius:20px;padding:20px}
-.field{display:flex;flex-direction:column;gap:6px;margin:14px 0}
-label,.legend{font-weight:800}
-input[type=text],input[type=tel],select,textarea{font:inherit;color:inherit;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;width:100%}
-input:focus,select:focus,textarea:focus{outline:3px solid var(--accent);outline-offset:1px}
-.choices{display:flex;gap:8px;flex-wrap:wrap}
-.choice input{position:absolute;opacity:0}
-.choice label{display:block;border:1.5px solid var(--line);background:var(--bg);border-radius:999px;padding:10px 18px;cursor:pointer;font-weight:700}
-.choice input:checked+label{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.choice input:focus-visible+label{outline:3px solid var(--accent);outline-offset:2px}
-.check{display:flex;gap:10px;align-items:flex-start;margin:12px 0;font-weight:400;font-size:16px}
-.check input{margin-top:5px;width:20px;height:20px;flex:none}
-.status{margin-top:12px;font-weight:800;min-height:1.6em}
-.status.bad{color:var(--warn)}.status.ok{color:var(--ok)}
-.hint{color:var(--muted);font-size:15px;font-weight:400}
-.about{display:grid;gap:14px;align-items:center}
-.about img{border-radius:18px;max-width:300px}
-details{background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0}
-summary{font-weight:800;cursor:pointer}
-details p{color:var(--muted);margin-top:8px;font-size:16px}
-footer{border-top:1px solid var(--line);padding-block:22px;color:var(--muted);font-size:15px}
-.sticky{position:fixed;inset-inline:0;bottom:0;z-index:30;background:var(--bg);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px}
-.sticky .btn{flex:1;padding:12px 10px;font-size:17px}
-@media(min-width:760px){
-  body{padding-bottom:0}
-  .hero{grid-template-columns:1.1fr .9fr;align-items:center;gap:40px}
-  .cards{grid-template-columns:1fr 1fr}
-  .about{grid-template-columns:300px 1fr;gap:30px}
-  .sticky{display:none}
-}
-</style>
+<meta property="og:image:width" content="900">
+<meta property="og:image:height" content="675">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/assistant-hebrew.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"ספר מאויר אישי של פיקו","description":"ספר מאויר אישי, 24 עמודי סיפור, שנכתב ומאויר מהסיפור והתמונות של המזמינים.","brand":{"@type":"Brand","name":"Pikoo"},"image":"https://karinzikvashvili.github.io/pikoo/og.jpg","offers":[{"@type":"Offer","name":"ספר מודפס בכריכה קשה","price":"199","priceCurrency":"ILS","availability":"https://schema.org/InStock","url":"https://karinzikvashvili.github.io/pikoo/#order"},{"@type":"Offer","name":"ספר דיגיטלי (PDF)","price":"89","priceCurrency":"ILS","availability":"https://schema.org/InStock","url":"https://karinzikvashvili.github.io/pikoo/#order"}]}
+</script>
 </head>
 <body>
-<div class="wrap">
-<div class="top"><a class="mark" href="#top">Pikoo.</a><span class="pill" id="pill">מבצע לזמן מוגבל</span></div>
+<a class="skip" href="#main">דילוג לתוכן</a>
+<header class="top"><div class="wrap">
+  <a class="mark" href="#top" aria-label="Pikoo, לראש הדף">Pikoo.</a>
+  <nav class="nav" aria-label="ניווט ראשי">
+    <a href="#sample">ספר לדוגמה</a><a href="#how">איך זה עובד</a><a href="#price">מחיר</a><a href="#faq">שאלות</a>
+  </nav>
+  <a class="btn small" href="#order">להזמנה</a>
+</div></header>
 
-<main id="top">
+<main id="main"><div class="wrap" id="top">
+
 <section class="hero">
   <div>
     <h1>תפסיקו לקנות מתנות שנשכחות במגירה</h1>
-    <p class="lead" style="margin-top:14px">ספר מאויר שכולו הוא: הבדיחות הפנימיות שלכם, המקומות שלכם, והמשפט שהוא תמיד אומר. כל פרט נלקח ממה שאתם מספרים לי, עם הדמויות האמיתיות בתוכו, ולא מתבנית שמחליפים בה שם.</p>
-    <div class="offer" style="margin-top:16px">
-      <span>דיגיטלי 89 ₪<s>159</s></span>
-      <span>מודפס 199 ₪<s>329</s></span>
+    <p class="lead">ספר מאויר שכולו הוא: הבדיחות הפנימיות שלכם, המקומות שלכם, והמשפט שהוא תמיד אומר. כל פרט נלקח ממה שאתם מספרים לי, עם הדמויות האמיתיות בתוכו, ולא מתבנית שמחליפים בה שם.</p>
+    <div class="offer" aria-label="מחירים">
+      <span>מודפס 199 ₪<s><span class="sr">במקום </span>329</s></span>
+      <span>דיגיטלי 89 ₪<s><span class="sr">במקום </span>159</s></span>
     </div>
-        <div class="cta"><a class="btn" href="#order">אני רוצה ספר כזה</a><a class="btn ghost" href="#sample">לראות ספר לדוגמה</a></div>
+    <div class="cta"><a class="btn" href="#order">אני רוצה ספר כזה</a><a class="btn ghost" href="#sample">לראות ספר לדוגמה</a></div>
+    <ul class="assure">
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>לא משלמים בשלב ההזמנה</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>מאשרים טיוטה לפני שמפיקים</li>
+      <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>שני סבבי תיקונים כלולים</li>
+    </ul>
   </div>
-  <img class="cover" src="img/cover.jpg" alt="כריכת ספר לדוגמה: חיפוש אוצר ליום ההולדת" width="900" height="675" fetchpriority="high">
+  <figure class="book">
+    <img src="img/cover.jpg" alt="כריכת ספר לדוגמה: חיפוש אוצר ליום ההולדת. זוג מאויר על רקע קו החוף של תל אביב" width="900" height="675" fetchpriority="high">
+    <span class="tagline">דוגמה מספר אמיתי</span>
+  </figure>
 </section>
 
 <section aria-labelledby="h-pain">
-  <span class="bar" aria-hidden="true"></span>
-  <h2 id="h-pain">למה מתנות רגילות לא נוגעות</h2>
-  <div class="steps" style="margin-top:16px">
-    <div class="step"><b>1</b><div><h3>קונים, מקבלים תודה, וזה נעלם</h3><p>שעון, בושם, גרביים. הוא יגיד תודה ויניח במגירה. ספר שכולו הוא, עם הרגע שרק שניכם זוכרים, לא מניחים במגירה.</p></div></div>
-    <div class="step"><b>2</b><div><h3>אין זמן, ואין מילים</h3><p>את יודעת בדיוק מה אוהבים בו, אבל להפוך את זה לטקסט וציורים לוקח שבועות. אתם מספרים, ואני עושה את הכל.</p></div></div>
-    <div class="step"><b>3</b><div><h3>החשש שזה יצא גנרי</h3><p>בדיוק בגלל זה כל משפט בספר נלקח ממה שסיפרתם: משפט שהוא באמת אומר, מקום שבאמת הייתם בו. אני לא ממציאה עובדות על האנשים בספר.</p></div></div>
+  <div class="sec-head"><span class="bar" aria-hidden="true"></span>
+  <h2 id="h-pain">למה מתנות רגילות לא נוגעות</h2></div>
+  <div class="why">
+    <div><h3>קונים, מקבלים תודה, וזה נעלם</h3><p>שעון, בושם, גרביים. הוא יגיד תודה ויניח במגירה. ספר שכולו הוא, עם הרגע שרק שניכם זוכרים, לא מניחים במגירה.</p></div>
+    <div><h3>אין זמן, ואין מילים</h3><p>את יודעת בדיוק מה אוהבים בו, אבל להפוך את זה לטקסט וציורים לוקח שבועות. אתם מספרים, ואני עושה את הכל.</p></div>
+    <div><h3>החשש שזה יצא גנרי</h3><p>בדיוק בגלל זה כל משפט בספר נלקח ממה שסיפרתם: משפט שהוא באמת אומר, מקום שבאמת הייתם בו. אני לא ממציאה עובדות על האנשים בספר.</p></div>
   </div>
 </section>
 
-<section id="sample" class="proof" aria-labelledby="h-sample">
-  <span class="bar" aria-hidden="true"></span>
+<section id="sample" aria-labelledby="h-sample">
+  <div class="sec-head"><span class="bar" aria-hidden="true"></span>
   <h2 id="h-sample">ככה נראה ספר שמרגישים בו את האדם</h2>
-  <p class="lead">ספר יום הולדת 37, חיפוש אוצר בתל אביב. 24 עמודי סיפור, כריכה והקדשה, בגודל 30x20 ס״מ.</p>
-  <div class="gallery">
+  <p class="lead">ספר יום הולדת 37, חיפוש אוצר בתל אביב. 24 עמודי סיפור, כריכה והקדשה, בגודל 30x20 ס״מ.</p></div>
+  <div class="gallery" tabindex="0" role="group" aria-label="עמודים מהספר חיפוש אוצר ליום ההולדת">
     <img src="img/map.jpg" alt="עמוד מהספר: מפה" loading="lazy" width="900" height="675">
     <img src="img/party.jpg" alt="עמוד מהספר: הרגע שבו שניהם מצחיקים אחד את השני" loading="lazy" width="900" height="675">
     <img src="img/end.jpg" alt="עמוד מהספר: הסוף, עם הספר בידיים" loading="lazy" width="900" height="675">
   </div>
-  <p class="hint">הדמויות הן איור שמזכיר את האנשים האמיתיים, לא העתק שלהם ברמת הפרטים הקטנים. אם משהו בולט לא מתאים, אומרים ומתקנים.</p>
-  <div class="quote">
-    <q>״אין מילים. כמה יפה ומרגש. תודה רבה רבה אהובים, מזכרת מדהימה לעד.״</q>
-    <small>מורן, גננת, על הספר שהכנו לגננות בסוף השנה. ההודעה הגיעה ב-30 ביוני 2025.</small>
+  <p class="hint note">הדמויות הן איור שמזכיר את האנשים האמיתיים, לא העתק שלהם ברמת הפרטים הקטנים. אם משהו בולט לא מתאים, אומרים ומתקנים.</p>
+  <div class="proof2">
+    <figure>
+      <video controls preload="none" playsinline poster="img/video-poster.jpg" aria-label="דפדוף בספר המודפס" width="480" height="848"><source src="pikoo-video.mp4" type="video/mp4"></video>
+      <figcaption>דפדוף בספר המודפס, בכריכה קשה</figcaption>
+    </figure>
+    <blockquote class="quote">
+      <p>״אין מילים. כמה יפה ומרגש. תודה רבה רבה אהובים, מזכרת מדהימה לעד.״</p>
+      <footer>מורן, גננת, על הספר שהכנו לגננות בסוף השנה. ההודעה הגיעה ב-30 ביוני 2025.</footer>
+    </blockquote>
   </div>
-  <figure>
-    <video controls preload="none" playsinline poster="img/video-poster.jpg" aria-label="דפדוף בספר המודפס"><source src="pikoo-video.mp4" type="video/mp4"></video>
-    <figcaption>דפדוף בספר המודפס, בכריכה קשה</figcaption>
-  </figure>
 </section>
 
 <section aria-labelledby="h-books">
-  <span class="bar" aria-hidden="true"></span>
+  <div class="sec-head"><span class="bar" aria-hidden="true"></span>
   <h2 id="h-books">ספרים שיצרתי</h2>
-  <p class="lead" style="margin-top:8px">עמודים מתוך ספרים אמיתיים, באיורים של פיקו. כל אחד נבנה מהפרטים של האנשים שבו.</p>
+  <p class="lead">עמודים מתוך ספרים אמיתיים, באיורים של פיקו. כל אחד נבנה מהפרטים של האנשים שבו.</p></div>
   <div class="more">
     <figure>
-      <div class="gallery four"><img src="img/t02.jpg" alt="מורן ורינת בג׳ונגל" loading="lazy" width="900" height="621"><img src="img/t05.jpg" alt="הילדים חוגגים" loading="lazy" width="900" height="621"><img src="img/t09.jpg" alt="גננת מחבקת ילדים" loading="lazy" width="900" height="621"><img src="img/t13.jpg" alt="ילד עם שתי הגננות" loading="lazy" width="900" height="621"></div>
+      <div class="gallery four" tabindex="0" role="group" aria-label="עמודים מהספר הג׳ונגל שבגן"><img src="img/t02.jpg" alt="מורן ורינת בג׳ונגל" loading="lazy" width="900" height="621"><img src="img/t05.jpg" alt="הילדים חוגגים" loading="lazy" width="900" height="621"><img src="img/t09.jpg" alt="גננת מחבקת ילדים" loading="lazy" width="900" height="621"><img src="img/t13.jpg" alt="ילד עם שתי הגננות" loading="lazy" width="900" height="621"></div>
       <figcaption><b>הג׳ונגל שבגן:</b> ספר תודה לשתי גננות, מתוך ספר מודפס שהבאנו להן בסוף השנה.</figcaption>
     </figure>
     <figure>
-      <div class="gallery four"><img src="img/u01.jpg" alt="כריכה: אורי והרגשות האבודים" loading="lazy" width="900" height="621"><img src="img/u05.jpg" alt="עמוד מהספר" loading="lazy" width="900" height="621"><img src="img/u09.jpg" alt="עמוד מהספר" loading="lazy" width="900" height="621"><img src="img/u15.jpg" alt="עמוד מהספר" loading="lazy" width="900" height="621"></div>
+      <div class="gallery four" tabindex="0" role="group" aria-label="עמודים מהספר אורי והרגשות האבודים"><img src="img/u01.jpg" alt="כריכה: אורי והרגשות האבודים" loading="lazy" width="900" height="667"><img src="img/u05.jpg" alt="עמוד מהספר אורי והרגשות האבודים" loading="lazy" width="900" height="667"><img src="img/u09.jpg" alt="עמוד מהספר אורי והרגשות האבודים" loading="lazy" width="900" height="667"><img src="img/u15.jpg" alt="עמוד מהספר אורי והרגשות האבודים" loading="lazy" width="900" height="667"></div>
       <figcaption><b>אורי והרגשות האבודים:</b> ספר ילדים שיצרתי לבן שלי.</figcaption>
     </figure>
   </div>
 </section>
 
-<section aria-labelledby="h-how">
-  <span class="bar" aria-hidden="true"></span>
-  <h2 id="h-how">ארבעה צעדים, ואתם לא כותבים כלום בעצמכם</h2>
-  <div class="steps" style="margin-top:16px">
-    <div class="step"><b>1</b><div><h3>הזמנה של שתי דקות</h3><p>סוג הספר, שם וטלפון. בלי תמונות ובלי שאלון ארוך בשלב הזה.</p></div></div>
-    <div class="step"><b>2</b><div><h3>תשלום</h3><p>אחרי ההזמנה אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.</p></div></div>
-    <div class="step"><b>3</b><div><h3>מספרים לנו את הסיפור</h3><p>אחרי התשלום אני שולחת קישור אישי: מעלים תמונת פנים ותמונה עם גוף לכל דמות, ועונים על כמה שאלות, בכתב או בהקלטה קולית.</p></div></div>
-    <div class="step"><b>4</b><div><h3>מאשרים, ואז מקבלים</h3><p>קודם כיוון עלילה בשלוש שורות, ואחר כך טיוטה לאישור, עם שני סבבי תיקונים כלולים. רק אחרי זה מפיקים את הספר.</p></div></div>
-  </div>
+<section id="how" aria-labelledby="h-how">
+  <div class="sec-head"><span class="bar" aria-hidden="true"></span>
+  <h2 id="h-how">ארבעה צעדים, ואתם לא כותבים כלום בעצמכם</h2></div>
+  <ol class="steps">
+    <li><h3>הזמנה של שתי דקות</h3><p>סוג הספר, שם וטלפון. בלי תמונות ובלי שאלון ארוך בשלב הזה.</p></li>
+    <li><h3>תשלום</h3><p>אחרי ההזמנה אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.</p></li>
+    <li><h3>מספרים לי את הסיפור</h3><p>אחרי התשלום אני שולחת קישור אישי: מעלים תמונת פנים ותמונה עם גוף לכל דמות, ועונים על כמה שאלות, בכתב או בהקלטה קולית.</p></li>
+    <li><h3>מאשרים, ואז מקבלים</h3><p>קודם כיוון עלילה בשלוש שורות, ואחר כך טיוטה לאישור, עם שני סבבי תיקונים כלולים. רק אחרי זה מפיקים את הספר.</p></li>
+  </ol>
 </section>
 
-<section aria-labelledby="h-price">
-  <span class="bar" aria-hidden="true"></span>
-  <h2 id="h-price">מחיר</h2>
-  <div class="cards" style="margin-top:18px">
+<section id="price" aria-labelledby="h-price">
+  <div class="sec-head"><span class="bar" aria-hidden="true"></span>
+  <h2 id="h-price">מחיר</h2></div>
+  <div class="cards">
     <div class="card rec"><span class="tag">הכי מתאים למתנה</span>
       <h3>ספר מודפס</h3>
-      <div class="price">199 ₪<s>329 ₪</s></div>
-      <ul><li>כריכה קשה, 30x20 ס״מ, 24 עמודי סיפור</li><li>כולל קובץ PDF, משלוח לישראל</li><li>עד שתי דמויות, עד 10 ימי עסקים</li></ul>
+      <div class="price">199 ₪<s><span class="sr">במקום </span>329 ₪</s></div>
+      <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>כריכה קשה, 30x20 ס״מ, 24 עמודי סיפור</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>כולל קובץ PDF ומשלוח בישראל</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>עד שתי דמויות</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>עד 10 ימי עסקים</li></ul>
+      <a class="btn" href="#order" data-fmt="f2">להזמנת ספר מודפס</a>
     </div>
     <div class="card">
       <h3>ספר דיגיטלי</h3>
-      <div class="price">89 ₪<s>159 ₪</s></div>
-      <ul><li>קובץ PDF 30x20 ס״מ, במייל ובוואטסאפ</li><li>אפשר להדפיס בכל בית דפוס, מכל מקום בעולם</li><li>עד שתי דמויות, עד 3 ימי עסקים</li></ul>
+      <div class="price">89 ₪<s><span class="sr">במקום </span>159 ₪</s></div>
+      <ul><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>קובץ PDF 30x20 ס״מ, במייל ובוואטסאפ</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>אפשר להדפיס בכל בית דפוס, מכל מקום בעולם</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>עד שתי דמויות</li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg>עד 3 ימי עסקים</li></ul>
+      <a class="btn ghost" href="#order" data-fmt="f1">להזמנת ספר דיגיטלי</a>
     </div>
   </div>
-  <p class="extras">מחיר מבצע לזמן מוגבל, אחריו המחירים הרגילים: 329 ₪ למודפס ו-159 ₪ לדיגיטלי. רוצים יותר משתי דמויות, כמה עותקים או חבילת ועד? כתבו לי בוואטסאפ ואתן הצעה. המחירים סופיים וללא תוספת מע״מ.</p>
+  <p class="extras">אלה מחירי השקה. המחירים הרגילים הם 329 ₪ למודפס ו-159 ₪ לדיגיטלי. רוצים יותר משתי דמויות, כמה עותקים או חבילת ועד? כתבו לי בוואטסאפ ואתן הצעה. המחירים סופיים וללא תוספת מע״מ.</p>
 </section>
 
 <section id="order" aria-labelledby="h-order">
-  <span class="bar" aria-hidden="true"></span>
-  <h2 id="h-order">שתי דקות, וזה בדרך</h2>
-  <p class="lead" style="margin:8px 0 14px">ממלאים ארבעה פרטים ושולחים. אני חוזרת בוואטסאפ עם פרטי תשלום, ואחרי התשלום מקבלים קישור לתמונות ולסיפור.</p>
-  <form class="form" id="form" novalidate>
-    <div class="field"><span class="legend">איזה ספר?</span>
-      <div class="choices" role="radiogroup" aria-label="סוג הספר">
-        <div class="choice"><input type="radio" name="line" id="l1" value="תודה"><label for="l1">תודה</label></div>
-        <div class="choice"><input type="radio" name="line" id="l2" value="אהבה"><label for="l2">אהבה</label></div>
-        <div class="choice"><input type="radio" name="line" id="l3" value="משפחה"><label for="l3">משפחה</label></div>
-      </div></div>
-    <div class="field"><span class="legend">איזה פורמט?</span>
-      <div class="choices" role="radiogroup" aria-label="פורמט">
-        <div class="choice"><input type="radio" name="fmt" id="f2" value="מודפס (199 ₪)" checked><label for="f2">מודפס · 199 ₪</label></div>
-        <div class="choice"><input type="radio" name="fmt" id="f1" value="דיגיטלי (89 ₪)"><label for="f1">דיגיטלי · 89 ₪</label></div>
-      </div></div>
-    <div class="field"><label for="cname">שם</label><input type="text" id="cname" autocomplete="name"></div>
-    <div class="field"><label for="phone">מספר וואטסאפ</label><input type="tel" id="phone" autocomplete="tel" placeholder="050-0000000" dir="ltr" inputmode="tel"></div>
-    <div class="field"><label for="note">מי הגיבורים ולאיזה אירוע? <span class="hint">(לא חובה)</span></label><input type="text" id="note" placeholder="לדוגמה: יום הולדת 40 לדני, או סיום שנה בגן"></div>
-    <input type="text" id="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <div class="check"><input type="checkbox" id="ok"><label for="ok" style="font-weight:400">ידוע לי שזה מוצר בהתאמה אישית, ולכן אין החזרות אחרי אישור הטיוטה (חוץ מפגם בהדפסה). את התמונות והפרטים של האנשים שבספר אשלח רק אם יש לי אישור להשתמש בהם.</label></div>
-    <button class="btn" type="button" id="send" style="width:100%">שליחת הזמנה</button>
-    <div class="cta" style="margin-top:12px"><a class="btn wa" id="wa" style="flex:1" href="#">או לדבר איתי בוואטסאפ</a></div>
-    <div class="status" id="status" role="status"></div>
-    <p class="hint" style="margin-top:6px">לא משלמים עכשיו. הספר מופק רק אחרי שמאשרים כיוון עלילה וטיוטה.</p>
-  </form>
-</section>
-
-<section class="about" aria-labelledby="h-about">
-  <img src="img/karin.jpg" alt="איור של קרין, יוצרת פיקו, מחזיקה ספר מודפס" loading="lazy" width="300" height="400">
-  <div>
-    <span class="bar" aria-hidden="true"></span>
-    <h2 id="h-about">מי יוצרת את הספר שלכם</h2>
-    <p class="lead" style="margin-top:10px">אני קרין. מעל שלוש שנים אני עובדת עם בינה מלאכותית ויוצרת דמויות, ולמדתי UX/UI, ולכן אני מתכננת גם איך הספר נקרא ומרגיש, לא רק איך הוא נראה. את הסיפור הראשון יצרתי לפני שנתיים, ומאז הכנתי עוד ספרים: לגננות של הילד שלי, ולבן הזוג שלי ליום ההולדת.</p>
-    <p class="lead" style="margin-top:10px">האיורים נעשים בעזרת כלי בינה מלאכותית, ואני מנחה, בוחרת, מעצבת ומתקנת כל עמוד. אני כותבת רק את מה שסיפרתם לי.</p>
+  <div class="order">
+    <div>
+      <span class="bar" aria-hidden="true"></span>
+      <h2 id="h-order">שתי דקות, וזה בדרך</h2>
+      <p class="lead" style="margin-top:10px">ממלאים ארבעה פרטים ושולחים. לא משלמים עכשיו.</p>
+      <ul class="next">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg><span>אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg><span>אחרי התשלום מקבלים קישור אישי לתמונות ולסיפור.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.500"/></svg><span>הספר מופק רק אחרי שאישרתם כיוון עלילה וטיוטה.</span></li>
+      </ul>
+    </div>
+    <form class="form" id="form" novalidate>
+      <fieldset class="field"><legend>איזה ספר?</legend>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="line" id="l1" value="תודה"><label for="l1">תודה</label></div>
+          <div class="choice"><input type="radio" name="line" id="l2" value="אהבה"><label for="l2">אהבה</label></div>
+          <div class="choice"><input type="radio" name="line" id="l3" value="משפחה"><label for="l3">משפחה</label></div>
+        </div><span class="err" id="e-line"></span></fieldset>
+      <fieldset class="field"><legend>איזה פורמט?</legend>
+        <div class="choices">
+          <div class="choice"><input type="radio" name="fmt" id="f2" value="מודפס (199 ₪)" checked><label for="f2">מודפס · 199 ₪</label></div>
+          <div class="choice"><input type="radio" name="fmt" id="f1" value="דיגיטלי (89 ₪)"><label for="f1">דיגיטלי · 89 ₪</label></div>
+        </div></fieldset>
+      <div class="field"><label for="cname">שם</label><input type="text" id="cname" autocomplete="name" aria-describedby="e-cname"><span class="err" id="e-cname"></span></div>
+      <div class="field"><label for="phone">מספר וואטסאפ</label><input type="tel" id="phone" autocomplete="tel" placeholder="050-0000000" dir="ltr" inputmode="tel" aria-describedby="e-phone"><span class="err" id="e-phone"></span></div>
+      <div class="field"><label for="note">מי הגיבורים ולאיזה אירוע? <span class="hint">(לא חובה)</span></label><input type="text" id="note" placeholder="לדוגמה: יום הולדת 40 לדני"></div>
+      <input type="text" id="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="check"><input type="checkbox" id="ok" aria-describedby="e-ok"><label for="ok">קראתי את <a href="terms.html" target="_blank" rel="noopener">התקנון</a> ואת <a href="privacy.html" target="_blank" rel="noopener">מדיניות הפרטיות</a>. ידוע לי שזה מוצר בהתאמה אישית, ולכן אין החזרות אחרי אישור הטיוטה (חוץ מפגם בהדפסה). את התמונות והפרטים של האנשים שבספר אשלח רק אם יש לי אישור להשתמש בהם.</label></div>
+      <span class="err" id="e-ok" style="display:block;margin-bottom:14px"></span>
+      <button class="btn" type="submit" id="send" style="width:100%">שליחת הזמנה</button>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+      <div class="or">או</div>
+      <a class="btn wa" id="wa" style="width:100%" href="https://wa.me/972527339065" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 1.800a8.200 8.200 0 1 1-4.200 15.250l-.3-.18-2.950.770.790-2.880-.2-.3A8.200 8.200 0 0 1 12 3.800zM8.500 7.300c-.2 0-.5.070-.75.350-.26.280-1 .970-1 2.370s1.020 2.750 1.160 2.940c.14.190 2 3.050 4.850 4.280 2.370 1.020 2.850.820 3.370.770.520-.050 1.670-.680 1.900-1.340.240-.660.240-1.220.170-1.340-.070-.120-.260-.190-.540-.330-.280-.140-1.670-.820-1.930-.920-.260-.090-.450-.140-.640.140-.190.280-.730.920-.900 1.110-.160.190-.330.210-.610.070-.280-.140-1.200-.440-2.280-1.400-.840-.750-1.410-1.680-1.580-1.960-.160-.280-.020-.430.120-.570.130-.130.280-.330.420-.490.140-.170.190-.280.280-.470.090-.190.050-.350-.020-.490-.070-.140-.630-1.530-.870-2.090-.230-.550-.460-.470-.640-.480z"/></svg>לדבר איתי בוואטסאפ</a>
+    </form>
   </div>
 </section>
 
-<section aria-labelledby="h-faq">
-  <span class="bar" aria-hidden="true"></span>
-  <h2 id="h-faq">שאלות</h2>
+<section class="about" aria-labelledby="h-about">
+  <img src="img/karin-portrait.jpg" alt="איור של קרין, יוצרת פיקו, מחזיקה ספר מאויר" loading="lazy" width="570" height="578">
+  <div>
+    <span class="bar" aria-hidden="true"></span>
+    <h2 id="h-about">מי יוצרת את הספר שלכם</h2>
+    <p class="lead" style="margin-top:12px">אני קרין. מעל שלוש שנים אני עובדת עם בינה מלאכותית ויוצרת דמויות, ולמדתי UX/UI, ולכן אני מתכננת גם איך הספר נקרא ומרגיש, לא רק איך הוא נראה. את הסיפור הראשון יצרתי לפני שנתיים, ומאז הכנתי עוד ספרים: לגננות של הילד שלי, ולבן הזוג שלי ליום ההולדת.</p>
+    <p class="lead">האיורים נעשים בעזרת כלי בינה מלאכותית, ואני מנחה, בוחרת, מעצבת ומתקנת כל עמוד. אני כותבת רק את מה שסיפרתם לי.</p>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="h-faq">
+  <div class="sec-head"><span class="bar" aria-hidden="true"></span>
+  <h2 id="h-faq">שאלות</h2></div>
+  <div class="faq">
   <details><summary>כמה זמן זה לוקח?</summary><p>ספר דיגיטלי: עד 3 ימי עסקים. ספר מודפס: עד 10 ימי עסקים, כולל משלוח. הספירה מתחילה כשקיבלתי תשלום, את הסיפור ואת התמונות, ונעצרת בזמן שאתם בודקים טיוטה. צריכים תאריך מסוים? כתבו לי ואבדוק אם אפשר.</p></details>
   <details><summary>איזו תמונה לשלוח?</summary><p>לכל דמות: תמונת פנים ברורה וטבעית, ותמונה אחת שרואים בה את הגוף. בלי משקפי שמש ובלי פילטרים. מעלים אותן בקישור האישי שמקבלים אחרי התשלום.</p></details>
   <details><summary>כמה תיקונים כלולים?</summary><p>שני סבבי תיקונים. בכל סבב אתם אומרים מה לשנות, ואני מתקנת.</p></details>
   <details><summary>לאן אפשר לשלוח?</summary><p>ספר מודפס נשלח לכתובות בישראל בלבד. ספר דיגיטלי אפשר להזמין מכל מקום בעולם.</p></details>
-  <details><summary>אפשר להחזיר?</summary><p>ספר הוא מוצר בהתאמה אישית, ולכן אין החזרות אחרי אישור הטיוטה, חוץ מפגם בהדפסה.</p></details>
-  <details><summary>מה קורה עם התמונות שלנו?</summary><p>שם, טלפון ופרטי ההזמנה נשמרים בגיליון פרטי ובמייל של פיקו, בגישת בעלת העסק בלבד. להכנת האיורים אני משתמשת בכלי עיצוב ובינה מלאכותית (Canva). התמונות משמשות רק להכנת האיורים ונמחקות בסיום ההפקה. המידע לא נמסר לאחרים, חוץ ממה שנדרש לבית דפוס ולשירות משלוחים. אפשר לבקש לראות, לתקן או למחוק בוואטסאפ <bdi dir="ltr">052-733-9065</bdi>.</p></details>
+  <details><summary>אפשר להחזיר?</summary><p>ספר הוא מוצר בהתאמה אישית, ולכן אין החזרות אחרי אישור הטיוטה, חוץ מפגם בהדפסה. הפרטים המלאים <a href="terms.html">בתקנון</a>.</p></details>
+  <details><summary>מה קורה עם התמונות שלנו?</summary><p>שם, טלפון ופרטי ההזמנה נשמרים בגיליון פרטי ובמייל של פיקו, בגישת בעלת העסק בלבד. להכנת האיורים אני משתמשת בכלי עיצוב ובינה מלאכותית (Canva). התמונות משמשות רק להכנת האיורים ונמחקות בסיום ההפקה. המידע לא נמסר לאחרים, חוץ ממה שנדרש לבית דפוס ולשירות משלוחים. הפרטים המלאים <a href="privacy.html">במדיניות הפרטיות</a>.</p></details>
+  </div>
 </section>
-</main>
-<footer>פיקו (Pikoo). ספרים מאוירים אישיים מפרטים אמיתיים. וואטסאפ וטלפון: <bdi dir="ltr">052-733-9065</bdi></footer>
+
+<div class="closing">
+  <h2>את מי נאייר בשבילך?</h2>
+  <p>ההזמנה לוקחת שתי דקות, ולא משלמים עד שאני חוזרת אליכם.</p>
+  <div class="cta"><a class="btn" href="#order">להזמנת ספר</a></div>
 </div>
 
-<div class="sticky"><a class="btn" href="#order">להזמנה</a><a class="btn wa" id="wa2" href="#">וואטסאפ</a></div>
+</div></main>
+
+<footer class="foot"><div class="wrap">
+  <div>
+    <a class="mark" href="#top" aria-label="Pikoo, לראש הדף">Pikoo.</a>
+    <p style="margin-top:8px">ספרים מאוירים אישיים, מהסיפור והתמונות שלכם.</p>
+    <p style="margin-top:8px">וואטסאפ וטלפון: <a href="https://wa.me/972527339065" target="_blank" rel="noopener"><bdi dir="ltr">052-733-9065</bdi></a> · מייל: <a href="mailto:pikoobooks@gmail.com"><bdi dir="ltr">pikoobooks@gmail.com</bdi></a></p>
+  </div>
+  <div>
+    <nav aria-label="קישורי מידע"><a href="terms.html">תקנון</a><a href="privacy.html">מדיניות פרטיות</a><a href="accessibility.html">הצהרת נגישות</a></nav>
+    <p style="margin-top:12px"><small>© <span id="yr">2026</span> פיקו (Pikoo). כל הזכויות שמורות.</small></p>
+  </div>
+</div></footer>
+
+<div class="sticky"><a class="btn" href="#order">להזמנה</a><a class="btn wa" id="wa2" href="https://wa.me/972527339065" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 1.800a8.200 8.200 0 1 1-4.200 15.250l-.3-.18-2.950.770.790-2.880-.2-.3A8.200 8.200 0 0 1 12 3.800zM8.500 7.300c-.2 0-.5.070-.75.350-.26.280-1 .970-1 2.370s1.020 2.750 1.160 2.940c.14.190 2 3.050 4.850 4.280 2.370 1.020 2.850.820 3.370.770.520-.050 1.670-.680 1.900-1.340.240-.660.240-1.220.170-1.340-.070-.120-.260-.190-.540-.330-.280-.140-1.670-.820-1.930-.920-.260-.090-.450-.140-.640.140-.190.280-.730.920-.900 1.110-.160.190-.330.210-.610.070-.280-.140-1.200-.440-2.280-1.400-.840-.750-1.410-1.680-1.580-1.960-.160-.280-.020-.430.120-.570.130-.130.280-.330.420-.490.140-.170.190-.280.280-.470.090-.190.050-.350-.020-.490-.070-.140-.630-1.530-.870-2.090-.230-.550-.460-.470-.640-.480z"/></svg>וואטסאפ</a></div>
 
 <script>
 (function(){
   var SCRIPT_URL="https://script.google.com/macros/s/AKfycbzPmQh5xQ8qxsZ8nbKefd9BK188Abw25yx2C8t7xrqy7LwY0lcm_efcXIiAoqYudZ_pvg/exec", WA="972527339065";
   var $=function(s){return document.querySelector(s)};
+  $("#yr").textContent=new Date().getFullYear();
   function radio(n){var r=document.querySelector('input[name="'+n+'"]:checked');return r?r.value:""}
   function status(t,k){var s=$("#status");s.textContent=t;s.className="status"+(k?" "+k:"")}
   function waLink(){var l=radio("line"),f=radio("fmt"),n=$("#cname").value.trim();
     var t="היי, ראיתי את פיקו ואשמח לפרטים על ספר מאויר"+(l?" ("+l+")":"")+(f?", "+f:"")+(n?". שמי "+n:"")+".";
     return "https://wa.me/"+WA+"?text="+encodeURIComponent(t)}
   function setWa(){var h=waLink();$("#wa").href=h;$("#wa2").href=h}
-  setWa();["cname"].forEach(function(i){$("#"+i).addEventListener("input",setWa)});
+  setWa();$("#cname").addEventListener("input",setWa);
   document.querySelectorAll("input[name=line],input[name=fmt]").forEach(function(r){r.addEventListener("change",setWa)});
-  function check(){var b=[];if(!radio("line"))b.push("איזה ספר");if(!$("#cname").value.trim())b.push("שם");
-    var ph=$("#phone").value.replace(/\D/g,"");if(ph.length<9)b.push("מספר וואטסאפ תקין");if(!$("#ok").checked)b.push("אישור התנאים");return b}
-  $("#send").onclick=function(){
-    var bad=check();if(bad.length){status("חסר: "+bad.join(", "),"bad");return}
+  document.querySelectorAll("[data-fmt]").forEach(function(a){a.addEventListener("click",function(){$("#"+a.dataset.fmt).checked=true;setWa()})});
+  function err(id,msg,input){$("#e-"+id).textContent=msg||"";if(input){if(msg)input.setAttribute("aria-invalid","true");else input.removeAttribute("aria-invalid")}}
+  function check(){var first=null;
+    function bad(id,msg,el){err(id,msg,el&&el.type!=="radio"&&el.type!=="checkbox"?el:null);if(msg&&!first)first=el}
+    bad("line",radio("line")?"":"בחרו סוג ספר",$("#l1"));
+    bad("cname",$("#cname").value.trim()?"":"כתבו שם",$("#cname"));
+    bad("phone",$("#phone").value.replace(/\D/g,"").length>=9?"":"כתבו מספר וואטסאפ תקין",$("#phone"));
+    bad("ok",$("#ok").checked?"":"צריך לאשר את התנאים כדי לשלוח",$("#ok"));
+    return first}
+  $("#form").addEventListener("submit",function(e){
+    e.preventDefault();
+    var first=check();if(first){status("חסרים פרטים, ראו למעלה.","bad");first.focus();return}
     var btn=$("#send");btn.disabled=true;status("שולחים...");
     var d={line:radio("line"),fmt:radio("fmt"),name:$("#cname").value.trim(),phone:$("#phone").value.trim(),occasion:$("#note").value.trim(),heroes:$("#note").value.trim(),website:$("#website").value};
     if(!SCRIPT_URL){window.location.href=waLink();return}
     fetch(SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(d)})
       .then(function(){status("ההזמנה התקבלה! אני חוזרת אליכם בוואטסאפ עם פרטי תשלום.","ok")})
-      .catch(function(){btn.disabled=false;status("השליחה נכשלה. אפשר לדבר איתי בוואטסאפ במקום.","bad")})};
+      .catch(function(){btn.disabled=false;status("השליחה נכשלה. אפשר לדבר איתי בוואטסאפ במקום.","bad")})});
 })();
 </script>
 </body>
