@@ -1,80 +1,83 @@
 @page { size: 210mm 297mm; margin: 0; }
-:root { --ink: #111; --paper: #fffdf7; --yellow: #ffe066; --gold: #f2b134; --red: #e63946; --cream: #fff4d6; }
+:root { --ink: #111; --cream: #fdf6e3; --lav: #d9c6ea; --tag: #f6e3c4; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { background: #555; }
 body { font-family: 'Rubik', sans-serif; color: var(--ink); direction: rtl; }
 
 /* ---------- page ---------- */
-.page { width: 210mm; height: 297mm; margin: 0 auto 8mm; padding: 9mm 8mm 10mm; position: relative; overflow: hidden;
-  display: flex; flex-direction: column; gap: 3mm; page-break-after: always; break-after: page;
-  background:
-    radial-gradient(circle, rgba(0,0,0,.09) 1px, transparent 1.3px) 0 0 / 3mm 3mm,
-    var(--paper); }
+.page { width: 210mm; height: 297mm; margin: 0 auto 8mm; padding: 6mm 5mm 6mm; position: relative; overflow: hidden;
+  display: flex; flex-direction: column; gap: 2.2mm; background: #fff; page-break-after: always; break-after: page; }
 @media print { html, body { background: none; } .page { margin: 0; } }
 
-/* ---------- comic-logo title ---------- */
-header { display: flex; align-items: flex-end; gap: 3mm; flex-wrap: wrap; justify-content: flex-start; }
-header h2 { font-family: 'Rubik'; font-weight: 900; font-size: 25pt; line-height: 1; transform: rotate(-1.5deg);
-  background: var(--ink); padding: 1.6mm 4mm 2.2mm; box-shadow: 1.6mm 1.6mm 0 var(--red); }
-header h2 span { color: var(--yellow); letter-spacing: .3px; }
-header .sub { font-weight: 600; font-size: 11pt; background: #fff; border: 2.4px solid var(--ink); padding: 1mm 3mm;
-  transform: rotate(1deg); box-shadow: 1mm 1mm 0 var(--ink); margin-bottom: 1mm; }
+/* ---------- header: running title brush + page tag, section title highlight, handwritten subtitle ---------- */
+header { display: flex; flex-direction: column; align-items: center; gap: 1.2mm; }
+.run { position: relative; width: 100%; display: flex; justify-content: center; align-items: center; height: 11mm; }
+.run::before { content: ''; position: absolute; left: 3mm; right: 3mm; top: 50%; border-top: 1.4px solid var(--ink); }
+.run .brush { position: relative; font-family: 'Playpen Sans Hebrew'; font-weight: 800; font-size: 17pt; color: #fff;
+  background: var(--ink); padding: 1mm 11mm 1.6mm;
+  clip-path: polygon(3% 18%, 9% 4%, 30% 9%, 52% 0, 76% 7%, 94% 2%, 100% 30%, 96% 55%, 100% 88%, 80% 96%, 55% 100%, 30% 93%, 8% 100%, 0 78%, 4% 50%, 0 30%); }
+.run .tag { position: absolute; left: 4mm; top: 50%; transform: translateY(-50%) rotate(-2deg); background: var(--tag);
+  font-weight: 700; font-size: 10pt; padding: .6mm 3.5mm; border-radius: 1mm; }
+header h2 { font-family: 'Rubik'; font-weight: 800; font-size: 21pt; line-height: 1.05; padding: .6mm 8mm 1mm;
+  background: var(--lav); clip-path: polygon(2% 10%, 20% 0, 50% 6%, 80% 0, 99% 8%, 100% 60%, 97% 100%, 60% 93%, 30% 100%, 1% 94%, 0 50%); }
+header .sub { font-family: 'Playpen Sans Hebrew'; font-weight: 600; font-size: 12.5pt; margin-top: -.6mm;
+  background: linear-gradient(transparent 55%, #e9dcf4 55%); padding: 0 3mm; }
+header .sub i { font-style: normal; font-size: 13pt; }
 
 /* ---------- panels ---------- */
-.grid { flex: 1; display: flex; flex-direction: column; gap: 2.6mm; min-height: 0; }
-.row { flex: 1; display: flex; gap: 2.6mm; min-height: 0; }
-.frame { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; background: #fff;
-  border: 3px solid var(--ink); }
+.grid { flex: 1; display: flex; flex-direction: column; gap: 2mm; min-height: 0; }
+.row { flex: 1; display: flex; gap: 2mm; min-height: 0; }
+.frame { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; border: 2.2px solid var(--ink); background: #fff; }
 .art { flex: 1; position: relative; min-height: 30mm; overflow: hidden; }
-.img { position: absolute; inset: 0; background-size: cover; background-position: center 30%; }
+.img { position: absolute; inset: 0; background-size: cover; background-position: center 35%; }
 .img.ph { background: repeating-linear-gradient(45deg, #f1ead9 0 6mm, #f8f3e6 6mm 12mm);
   display: flex; flex-direction: column; align-items: center; justify-content: center; color: #a08d63; }
 .img.ph span { font-weight: 800; font-size: 13pt; } .img.ph small { font-size: 8pt; direction: ltr; }
+.label { position: absolute; top: 0; right: 0; background: var(--ink); color: #fff; font-family: 'Playpen Sans Hebrew';
+  font-weight: 600; font-size: 9pt; padding: .6mm 3mm; z-index: 3; }
 
-.label { position: absolute; top: 0; left: 0; background: var(--ink); color: var(--yellow); font-weight: 800;
-  font-size: 9.5pt; padding: .8mm 3mm; z-index: 3; }
-
-/* ---------- caption boxes (narration) ---------- */
-.cap { background: var(--yellow); font-weight: 500; font-size: 10pt; line-height: 1.4; color: var(--ink); }
-.cap p + p { margin-top: .9mm; }
-.cap.strip { border-bottom: 3px solid var(--ink); padding: 1.8mm 3mm; }
-.cap.strip.bottom { border-bottom: 0; border-top: 3px solid var(--ink); }
-.cap.box { position: absolute; top: 2.2mm; right: 2.2mm; max-width: 64%; z-index: 2; padding: 1.6mm 2.8mm;
-  border: 2.4px solid var(--ink); box-shadow: 1mm 1mm 0 rgba(0,0,0,.85); }
-.cap.box.bottom { top: auto; bottom: 2.2mm; }
+/* ---------- narration box: cream, on the panel's left side ---------- */
+.cap { position: absolute; z-index: 2; left: 2.2mm; top: 50%; transform: translateY(-50%); max-height: calc(100% - 4.4mm); width: 31%;
+  background: var(--cream); border: 1.6px solid var(--ink); box-shadow: .6mm .6mm 0 rgba(0,0,0,.25);
+  padding: 2mm 3mm; font-size: 9.6pt; line-height: 1.38; font-weight: 400;
+  display: flex; flex-direction: column; justify-content: center; }
+.cap p + p { margin-top: 1.4mm; }
+.cap.right { left: auto; right: 2.2mm; }
+.cap.tiny { top: 2.2mm; transform: none; width: auto; max-width: 40%; padding: 1.2mm 3.5mm; }
+.cap.wide { width: 40%; font-size: 9.2pt; }
+.cap.bottom { top: auto; transform: none; bottom: 2.2mm; width: auto; max-width: 70%; }
+.row > .frame:only-child .cap.bottom { max-width: 60%; }
+.row > .frame:not(:only-child) .cap.bottom { left: 2.2mm; right: 2.2mm; max-width: none; font-size: 9.2pt; padding: 1.6mm 2.6mm; }
 
 /* ---------- speech balloons ---------- */
-.bubbles { position: absolute; inset: 2.6mm 3mm; display: flex; flex-direction: column; gap: 3.4mm; z-index: 2; }
-.bubble { position: relative; max-width: 66%; background: #fff; border: 2.6px solid var(--ink); border-radius: 50% / 46%;
-  padding: 2.4mm 5mm; text-align: center; font-weight: 600; font-size: 10.4pt; line-height: 1.28; }
+.bubbles { position: absolute; inset: 2.4mm 3mm; z-index: 2; display: flex; flex-direction: column; gap: 4mm; pointer-events: none; }
+.bubble { position: relative; max-width: 44%; background: #fff; border: 2px solid var(--ink); border-radius: 50%;
+  padding: 3mm 6mm; text-align: center; font-weight: 500; font-size: 10.6pt; line-height: 1.25; }
 .bubble.r { align-self: flex-start; } .bubble.l { align-self: flex-end; }
 .bubble::before, .bubble::after { content: ''; position: absolute; width: 0; height: 0; border-style: solid; }
-/* tail: black outline triangle + white fill triangle */
-.bubble.r::before { bottom: -4.6mm; right: 28%; border-width: 4.6mm 0 0 3.6mm; border-color: var(--ink) transparent transparent transparent; }
-.bubble.r::after  { bottom: -3.3mm; right: calc(28% + .75mm); border-width: 3.4mm 0 0 2.5mm; border-color: #fff transparent transparent transparent; }
-.bubble.l::before { bottom: -4.6mm; left: 28%; border-width: 4.6mm 3.6mm 0 0; border-color: var(--ink) transparent transparent transparent; }
-.bubble.l::after  { bottom: -3.3mm; left: calc(28% + .75mm); border-width: 3.4mm 2.5mm 0 0; border-color: #fff transparent transparent transparent; }
+.bubble.r::before { bottom: -4.8mm; left: 26%; border-width: 5mm 3.8mm 0 0; border-color: var(--ink) transparent transparent transparent; }
+.bubble.r::after  { bottom: -3.3mm; left: calc(26% + .7mm); border-width: 3.4mm 2.6mm 0 0; border-color: #fff transparent transparent transparent; }
+.bubble.l::before { bottom: -4.8mm; right: 26%; border-width: 5mm 0 0 3.8mm; border-color: var(--ink) transparent transparent transparent; }
+.bubble.l::after  { bottom: -3.3mm; right: calc(26% + .7mm); border-width: 3.4mm 0 0 2.6mm; border-color: #fff transparent transparent transparent; }
 
 /* the "rights reserved" black panel */
 .frame.black { background: #000; align-items: center; justify-content: center; }
-.frame.black p { color: #fff; font-weight: 600; font-size: 10pt; text-align: center; padding: 4mm; }
-
-footer { position: absolute; bottom: 2.6mm; left: 0; right: 0; text-align: center; }
-footer span { display: inline-block; min-width: 7mm; padding: .5mm 1.6mm; background: var(--ink); color: #fff;
-  font-size: 8pt; font-weight: 800; border-radius: 3mm; }
+.frame.black p { color: #fff; font-family: 'Playpen Sans Hebrew'; font-size: 10.5pt; text-align: center; padding: 4mm; }
 
 /* ---------- cover ---------- */
-.cover { padding: 0; background: #2a1a12 center/cover no-repeat; }
+.cover { padding: 0; background-color: #8a2a6a !important; background-size: 100% auto !important; background-position: center bottom !important; background-repeat: no-repeat !important; }
+.cover::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 40mm; background: linear-gradient(180deg, #5a1d55 0%, #a12d6c 70%, rgba(166,45,111,0) 100%); }
 .cover.ph { background: linear-gradient(180deg, #f6b26b 0%, #e2725b 45%, #5b3a6b 75%, #1d3557 100%); }
-.cover h1 { margin-top: 12mm; text-align: center; font-family: 'Rubik'; font-weight: 900; line-height: .9; }
-.cover .num { display: block; font-size: 110pt; color: var(--yellow); -webkit-text-stroke: 3.2px var(--ink);
-  paint-order: stroke fill; text-shadow: 2.2mm 2.2mm 0 var(--red), 2.2mm 2.2mm 0 var(--ink); transform: rotate(-3deg); }
-.cover .rest { display: inline-block; margin-top: 3mm; font-size: 33pt; color: #fff; background: var(--ink);
-  padding: 2mm 6mm 3mm; transform: rotate(-2deg); box-shadow: 1.8mm 1.8mm 0 var(--red); }
+.cover h1 { position: relative; margin-top: 6mm; text-align: center; font-weight: 400; line-height: .9; }
+.cover .num { display: block; font-family: 'Rubik'; font-weight: 900; font-size: 76pt; color: #fff;
+  -webkit-text-stroke: 3px var(--ink); paint-order: stroke fill; text-shadow: 1.6mm 1.6mm 0 var(--ink); }
+.cover .rest { display: inline-block; margin-top: 1mm; font-family: 'Playpen Sans Hebrew'; font-weight: 800; font-size: 24pt;
+  color: #fff; background: var(--ink); padding: 2mm 12mm 3.5mm;
+  clip-path: polygon(3% 18%, 9% 4%, 30% 9%, 52% 0, 76% 7%, 94% 2%, 100% 30%, 96% 55%, 100% 88%, 80% 96%, 55% 100%, 30% 93%, 8% 100%, 0 78%, 4% 50%, 0 30%); }
 
 /* ---------- letter (page 24) ---------- */
-.letter .hero { height: 84mm; position: relative; border: 3px solid var(--ink); flex: none; }
-.letter .paper { flex: 1; background: var(--cream); border: 3px solid var(--ink); padding: 4.5mm 7mm;
-  font-size: 10.2pt; line-height: 1.5; font-weight: 500; box-shadow: 1.6mm 1.6mm 0 var(--ink); }
-.letter .paper p + p { margin-top: 1.5mm; }
+.letter .hero { height: 86mm; position: relative; border: 2.2px solid var(--ink); flex: none; }
+.letter .paper { flex: 1; background: var(--cream); border: 1.6px solid var(--ink); padding: 4.5mm 8mm;
+  font-family: 'Playpen Sans Hebrew'; font-size: 10pt; line-height: 1.55; }
+.letter .paper p + p { margin-top: 1.3mm; }
 .letter .paper p:first-child, .letter .paper p:nth-last-child(-n+2) { font-weight: 800; font-size: 11pt; }

@@ -18,8 +18,12 @@ const fs = require('fs');
   // Text-fit check: any page whose frames/letter overflow their space?
   const over = await pg.$$eval('section.page', (ss) => ss.map((s, i) => {
     const bad = [...s.querySelectorAll('.art')].some((a) => a.clientHeight < 60);
-    const p = s.querySelector('.paper');
-    return bad || (p && p.scrollHeight > p.clientHeight + 2) ? i + 1 : null;
+    const boxes = [...s.querySelectorAll('.paper, .cap')];
+    const art = [...s.querySelectorAll('.cap, .bubble')].some((c) => {
+      const a = c.closest('.art'); if (!a) return false;
+      const r = c.getBoundingClientRect(), q = a.getBoundingClientRect();
+      return r.top < q.top - 1 || r.bottom > q.bottom + 1; });
+    return bad || art || boxes.some((p) => p.scrollHeight > p.clientHeight + 2) ? i + 1 : null;
   }).filter(Boolean));
   console.log('pages with cramped art or overflowing text:', over.length ? over : 'none');
   await b.close();
