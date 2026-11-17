@@ -163,13 +163,13 @@ export const pages = [
   {
     n: 12, title: 'הגוון שלא מדוגדג. לכאורה.', sub: 'תיק פתוח, ללא הכרעה.',
     frames: [
-      { art: 'p12-f1.png', refs: 'DK', ratio: '4:3',
+      { art: 'p12-f1.png', refs: 'DK', ratio: '4:3', side: { D: 'l', K: 'r' },
         scene: 'The couple sprawled together on the sofa; she starts tickling his side with a mischievous grin. Space at the top for speech bubbles.',
         d: [['D', 'מאמי, די!'], ['K', 'מה די? זה מדגדג?']] },
-      { art: 'p12-f2.png', refs: 'DK', ratio: '4:3',
+      { art: 'p12-f2.png', refs: 'DK', ratio: '4:3', side: { D: 'l', K: 'r' },
         scene: 'He squirms and laughs uncontrollably on the sofa while she keeps tickling. Space at the top for a speech bubble.',
         d: [['D', 'לא! זה לא מדגדג! זה פשוט מציק!']] },
-      { art: 'p12-f3.png', refs: 'DK', ratio: '4:3',
+      { art: 'p12-f3.png', refs: 'DK', ratio: '4:3', side: { D: 'l', K: 'r' },
         scene: 'She stops and looks at him with an amused, skeptical expression, one eyebrow raised; he catches his breath. Space at the top for a speech bubble.',
         d: [['K', 'כן כן, בטח. ממש רואים.']] },
       { art: 'p12-f4.png', refs: 'DK', ratio: '4:3',
