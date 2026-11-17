@@ -20,16 +20,22 @@ function rows(frames) {
 
 function frameHTML(f) {
   if (f.black) return `<div class="frame black"><p>${esc(f.caption)}</p></div>`;
-  const caps = (f.n || []).map((t) => `<p>${esc(t)}</p>`).join('');
-  const capBox = caps ? `<div class="cap">${caps}</div>` : '';
-  const bubbles = (f.d || []).map(([who, t], i) =>
-    `<div class="bubble ${i % 2 ? 'l' : 'r'}" title="${speakers[who]}">${esc(t)}</div>`).join('');
+  const n = f.n || [];
+  const long = n.join(' ').length > 120;
+  const caps = n.map((t) => `<p>${esc(t)}</p>`).join('');
+  // Speaker side in the art: f.side = {D:'l'|'r', K:'l'|'r'}; default first speaker right.
+  const order = [...new Set((f.d || []).map(([w]) => w))];
+  const side = (w) => (f.side && f.side[w]) || (order.indexOf(w) === 0 ? 'r' : 'l');
+  const bubbles = (f.d || []).map(([who, t]) =>
+    `<div class="bubble ${side(who)}" data-who="${speakers[who]}">${esc(t)}</div>`).join('');
   const img = hasArt(f.art)
-    ? `<div class="img" style="background-image:url('${artPath(f.art)}')"></div>`
+    ? `<div class="img" style="background-image:url('${artPath(f.art)}');background-position:${f.pos || 'center 30%'}"></div>`
     : `<div class="img ph"><span>איור בהכנה</span><small>${esc(f.art)}</small></div>`;
-  const top = f.d ? '' : capBox, bottom = f.d ? capBox : '';
+  const strip = caps && long ? `<div class="cap strip ${f.d ? 'bottom' : ''}">${caps}</div>` : '';
+  const box = caps && !long ? `<div class="cap box ${f.d ? 'bottom' : ''}">${caps}</div>` : '';
   const label = f.label ? `<div class="label">${esc(f.label)}</div>` : '';
-  return `<div class="frame">${label}${top}<div class="art">${img}<div class="bubbles">${bubbles}</div></div>${bottom}</div>`;
+  const art = `<div class="art">${img}${label}${box}<div class="bubbles">${bubbles}</div></div>`;
+  return `<div class="frame">${f.d ? art + strip : strip + art}</div>`;
 }
 
 function pageHTML(p) {
@@ -39,17 +45,17 @@ function pageHTML(p) {
     return `<section class="page cover ${img ? '' : 'ph'}" style="${img}">
       <h1><span class="num">37</span><span class="rest">גוונים של דניאל</span></h1></section>`;
   }
-  const head = `<header><h2>${esc(p.title)}</h2><div class="sub">${esc(p.sub)}</div></header>`;
+  const head = `<header><h2><span>${esc(p.title)}</span></h2><div class="sub">${esc(p.sub)}</div></header>`;
   if (p.letter) {
     const f = p.frames[0];
     const img = hasArt(f.art) ? `<div class="img" style="background-image:url('${artPath(f.art)}')"></div>`
       : `<div class="img ph"><span>איור בהכנה</span></div>`;
     return `<section class="page letter">${head}<div class="hero">${img}</div>
       <div class="paper">${p.letterText.map((t) => `<p>${esc(t)}</p>`).join('')}</div>
-      <footer>${p.n}</footer></section>`;
+      <footer><span>${p.n}</span></footer></section>`;
   }
   const body = rows(p.frames).map((r) => `<div class="row">${r.map(frameHTML).join('')}</div>`).join('');
-  return `<section class="page">${head}<div class="grid">${body}</div><footer>${p.n}</footer></section>`;
+  return `<section class="page">${head}<div class="grid">${body}</div><footer><span>${p.n}</span></footer></section>`;
 }
 
 const html = `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8">
