@@ -75,8 +75,9 @@ for (const p of pages) {
     const subj = f.refs === 'DK'
       ? `Characters: ${who[0]}; and ${who[1]}.`
       : `Character: ${who[0]}.`;
-    md += `### פריים ${i + 1} → \`art/${f.art}\` (יחס ${f.ratio}; רפרנס: ${f.refs.split('').map((r) => refName[r]).join(' + ')})\n\n`;
-    md += '```\n' + `Comic panel, aspect ratio ${f.ratio}. ${subj} Scene: ${f.scene} ${STYLE}` + '\n```\n\n';
+    const r = f._half ? '3:4 (portrait)' : f.ratio === '3:4' ? '3:4' : '16:9';
+    md += `### פריים ${i + 1} → \`art/${f.art}\` (יחס ${r}; רפרנס: ${f.refs.split('').map((r) => refName[r]).join(' + ')})\n\n`;
+    md += '```\n' + `Comic panel, aspect ratio ${r}.${f._half ? ' Keep the top third empty for speech balloons / bottom quarter simple for a caption.' : ' Keep the left third calm (for a caption box).'} ${subj} Scene: ${f.scene} ${STYLE}` + '\n```\n\n';
   });
 }
 writeFileSync(new URL('./prompts.md', import.meta.url), md);

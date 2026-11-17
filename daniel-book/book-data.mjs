@@ -367,7 +367,7 @@ export const pages = [
 
 export const speakers = { D: 'דניאל', K: 'קרין' };
 
-export const STYLE = 'Style: high-end cinematic romantic graphic novel, semi-realistic painted rendering with clean confident ink comic outlines, cinematic light and shadow, rich warm colors (gold, cream, black, sunset tones, sea blue; purple-pink lighting for party scenes), natural facial expressions. Not childish, not exaggerated caricature. No text, no letters, no speech bubbles, no logos, no watermarks.';
+export const STYLE = 'Style: modern comic book art, polished professional contemporary comic illustration: crisp clean black ink outlines, vibrant saturated colors, smooth cel shading with soft gradients, expressive faces. Draw the characters exactly like the reference character sheets. No text, no letters, no speech balloons, no logos.';
 
 export const LIKENESS = {
   D: 'the man from the reference (keep his exact face likeness: short dark hair, slightly high hairline, short neat dark beard, dark eyes, natural warm smile, athletic build, broad shoulders, thin silver chain necklace)',
