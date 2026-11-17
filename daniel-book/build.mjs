@@ -32,7 +32,7 @@ function frameHTML(f) {
     : `<div class="img ph"><span>איור בהכנה</span><small>${esc(f.art)}</small></div>`;
   // Narration: cream box on the panel's left side; under dialogue it becomes a bottom box.
   const len = n.join(' ').length;
-  const cls = f.d || f._half ? 'bottom' : len < 40 ? 'tiny' : len > 260 ? 'wide' : '';
+  const cls = f.d || f._half || f.capSide === 'bottom' ? 'bottom' : len < 40 ? 'tiny' : len > 260 ? 'wide' : '';
   const box = caps ? `<div class="cap ${f.capSide || ''} ${cls}">${caps}</div>` : '';
   const label = '';
   return `<div class="frame"><div class="art">${img}${label}${box}<div class="bubbles">${bubbles}</div></div></div>`;

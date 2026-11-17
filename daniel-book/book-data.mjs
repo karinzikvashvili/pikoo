@@ -88,13 +88,13 @@ export const pages = [
   {
     n: 7, title: 'הגוון שנשאר', sub: 'יש חיבורים שלא חייבים למהר להגדיר.',
     frames: [
-      { art: 'p07-f1.png', refs: 'DK', ratio: '16:9',
+      { art: 'p07-f1.png', refs: 'DK', ratio: '16:9', capSide: 'bottom', pos: 'center 20%',
         scene: 'Collage over time: the two chatting at a cafe, texting on phones (glowing message bubbles without readable text), laughing together on a walk, meeting again in different seasons.',
         n: ['החיים היו מורכבים, ולכל אחד מהם הייתה הדרך שלו לעבור.', 'הם לא ניסו להפוך את החיבור הזה למשהו שהוא עדיין לא היה.', 'אבל גם לא ממש הצליחו להתנתק ממנו.'] },
-      { art: 'p07-f2.png', refs: 'D', ratio: '4:3',
+      { art: 'p07-f2.png', refs: 'D', ratio: '16:9', capSide: 'right',
         scene: 'He walks through an airport terminal with a suitcase and backpack, departing for a relocation to the USA, a plane visible through the big windows.',
         n: ['אפילו אוקיינוס שלם לא מחק את ההיכרות הזאת.', 'הם המשיכו בחייהם, אבל הקשר נשמר.'] },
-      { art: 'p07-f3.png', refs: 'DK', ratio: '16:9',
+      { art: 'p07-f3.png', refs: 'DK', ratio: '16:9', capSide: 'bottom', pos: 'center 45%',
         scene: 'Two parallel side-by-side scenes: right side, he in an American city (New York style skyline) looking at his phone and smiling; left side, she in Tel Aviv by the sea looking at her phone and smiling. A thin line of light connects the two phones.',
         n: ['ולפעמים, הדבר הכי משמעותי בקשר בין שני אנשים הוא לא מה שקורה ביניהם ברגע מסוים.', 'אלא העובדה שהם ממשיכים למצוא דרך להישאר בחיים אחד של השנייה.'] },
     ],
