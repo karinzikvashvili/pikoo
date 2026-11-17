@@ -370,6 +370,6 @@ export const speakers = { D: 'דניאל', K: 'קרין' };
 export const STYLE = 'Style: modern comic book art, polished professional contemporary comic illustration: crisp clean black ink outlines, vibrant saturated colors, smooth cel shading with soft gradients, expressive faces. Draw the characters exactly like the reference character sheets. No text, no letters, no speech balloons, no logos.';
 
 export const LIKENESS = {
-  D: 'the man from the reference (keep his exact face likeness: short dark hair, slightly high hairline, short neat dark beard, dark eyes, natural warm smile, athletic build, broad shoulders, thin silver chain necklace)',
-  K: 'the young woman from the reference (keep her exact face likeness: long dark-brown wavy voluminous hair with center part, full dark eyebrows, brown eyes, delicate freckles, full lips, soft rounded jawline — not square; no sunglasses)',
+  D: 'the man from the reference photo and character sheet (must look exactly like him: lean face with defined cheekbones, short dark hair receding at the temples (high hairline), slightly protruding ears, straight strong nose, short well-groomed dark beard and mustache, warm dark eyes that crinkle when he smiles, wide bright smile, tanned olive skin, slim athletic build, broad shoulders, thin silver chain)',
+  K: 'the young woman from the reference photo and character sheet (must look exactly like her: oval face with soft rounded jaw — not square, long voluminous dark chestnut-brown wavy hair with a center part and lighter brown face-framing strands, thick dark straight-arched eyebrows, brown eyes with winged eyeliner, light freckles across nose and cheeks, full lips, pearl choker and thin silver chains; no sunglasses)',
 };

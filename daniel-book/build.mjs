@@ -65,7 +65,7 @@ const html = `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-
 writeFileSync(new URL('./book.html', import.meta.url), html);
 
 // ---- prompts.md
-const refName = { D: 'char-daniel.png', K: 'char-karin.png' };
+const refName = { D: 'char-daniel.png + daniel-photo.jpg', K: 'char-karin.png + karin-photo.jpg' };
 let md = '# פרומפטים לאיורים — 37 גוונים של דניאל\n\nלכל פריים: להעלות את קבצי הרפרנס המצוינים (מתוך art/) ולהדביק את הפרומפט. לשמור את התוצאה בשם הקובץ המצוין בתיקיית art/ ולהריץ `node build.mjs`.\n\n';
 for (const p of pages) {
   md += `## עמוד ${p.n} — ${p.title}\n\n`;
