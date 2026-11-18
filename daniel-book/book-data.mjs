@@ -196,7 +196,7 @@ export const pages = [
   {
     n: 14, title: 'הגוון שמכיר את המלאכית שלו', sub: 'פער של עשר שנים. והתנהגות שלא תמיד תואמת את הגיל.',
     frames: [
-      { art: 'p14-f1.png', refs: 'DK', ratio: '4:3',
+      { art: 'p14-f1.png', refs: 'DK', ratio: '4:3', pos: 'center 0%', side: { D: 'l', K: 'l' }, tail: { D: 'out' },
         scene: 'Living room. He searches for the TV remote, lifting sofa cushions, suspicious look toward her; she sits innocently. Space at the top for speech bubbles.',
         d: [['D', 'מאמי, איפה השלט? שוב החבאת אותו?'], ['K', 'מאמי, למה שאני אחביא לך את השלט?']] },
       { art: 'p14-f2.png', refs: 'DK', ratio: '4:3',

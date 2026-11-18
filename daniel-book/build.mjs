@@ -26,7 +26,7 @@ function frameHTML(f) {
   const order = [...new Set((f.d || []).map(([w]) => w))];
   const side = (w) => (f.side && f.side[w]) || (order.indexOf(w) === 0 ? 'r' : 'l');
   const bubbles = (f.d || []).map(([who, t]) =>
-    `<div class="bubble ${side(who)}" data-who="${speakers[who]}">${esc(t)}</div>`).join('');
+    `<div class="bubble ${side(who)}${f.tail && f.tail[who] ? ' ' + f.tail[who] : ''}" data-who="${speakers[who]}">${esc(t)}</div>`).join('');
   const img = hasArt(f.art)
     ? `<div class="img" style="background-image:url('${artPath(f.art)}');background-position:${f.pos || 'center 35%'}"></div>`
     : `<div class="img ph"><span>איור בהכנה</span><small>${esc(f.art)}</small></div>`;

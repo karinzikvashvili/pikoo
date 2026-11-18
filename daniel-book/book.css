@@ -59,6 +59,9 @@ header .sub i { font-style: normal; font-size: 13pt; }
 .bubble.r::after  { bottom: -3.3mm; left: calc(26% + .7mm); border-width: 3.4mm 2.6mm 0 0; border-color: #fff transparent transparent transparent; }
 .bubble.l::before { bottom: -4.8mm; right: 26%; border-width: 5mm 0 0 3.8mm; border-color: var(--ink) transparent transparent transparent; }
 .bubble.l::after  { bottom: -3.3mm; right: calc(26% + .7mm); border-width: 3.4mm 0 0 2.6mm; border-color: #fff transparent transparent transparent; }
+/* tail pointing out toward the far side (speaker standing beside the bubble) */
+.bubble.l.out::before { right: 10%; left: auto; top: 66%; bottom: auto; border-width: 10mm 3.4mm 0 3.4mm; border-color: var(--ink) transparent transparent transparent; transform-origin: 50% 0; transform: rotate(-58deg); }
+.bubble.l.out::after  { right: calc(10% + 1mm); left: auto; top: calc(66% - .6mm); bottom: auto; border-width: 8mm 2.4mm 0 2.4mm; border-color: #fff transparent transparent transparent; transform-origin: 50% 0; transform: rotate(-58deg); }
 
 /* the "rights reserved" black panel */
 .frame.black { background: #000; align-items: center; justify-content: center; }
