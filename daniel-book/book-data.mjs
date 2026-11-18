@@ -233,7 +233,7 @@ export const pages = [
       { art: 'p16-f1.png', refs: 'DK', ratio: '16:9', pos: 'center 6%', capSide: 'bottom',
         scene: 'The couple at a party under deep red lighting, music, exchanging flirty looks, elegant and tasteful.',
         n: ['במהלך הדרך הם גילו יחד לא מעט עולמות חדשים.', 'חלקם מלאים במוזיקה.', 'חלקם בשיחות עמוקות.', 'וחלקם...'] },
-      { art: 'p16-f2.png', refs: 'DK', ratio: '4:3',
+      { art: 'p16-f2.png', refs: 'DK', ratio: '4:3', pos: 'center 0%',
         scene: 'He pulls her close and whispers something in her ear; she looks at him with a mischievous smile. Red party light. Space at the top for speech bubbles.',
         d: [['K', 'מאמי...'], ['D', 'מה, חיים?']] },
       { art: 'p16-f3.png', refs: 'DK', ratio: '4:3',
