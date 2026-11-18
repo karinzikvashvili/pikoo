@@ -205,7 +205,7 @@ export const pages = [
       { art: 'p14-f3.png', refs: 'DK', ratio: '4:3',
         scene: 'He lifts his gaze to her with a deadpan, playful look; she answers with innocent wide eyes. Space at the top for speech bubbles.',
         d: [['D', 'יא תחת.'], ['K', 'מה? אני רק דואגת לך, מאמי.']] },
-      { art: 'p14-f4.png', refs: 'DK', ratio: '4:3',
+      { art: 'p14-f4.png', refs: 'DK', ratio: '4:3', pos: 'center 8%',
         scene: 'He hugs her and pulls her toward him on the sofa, both laughing. A subtle halo glow behind her head as a visual joke.',
         n: ['היא המלאכית שלו.', 'לפחות עד שהיא פותחת את הפה.'] },
     ],
