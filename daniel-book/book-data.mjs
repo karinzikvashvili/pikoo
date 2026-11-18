@@ -222,7 +222,7 @@ export const pages = [
       { art: 'p15-f3.png', refs: 'DK', ratio: '4:3',
         scene: 'Transition to a party: lights, rhythm, the two dancing close, smiling, feeling free. Purple-pink lights. He wears a loose dark grey tank top.',
         n: ['ובפעמים אחרות, השקט התחלף במוזיקה חזקה, אורות ואנשים.', 'הקצב השתנה.', 'ההנאה נשארה אותה הנאה.'] },
-      { art: 'p15-f4.png', refs: 'DK', ratio: '16:9',
+      { art: 'p15-f4.png', refs: 'DK', ratio: '16:9', pos: 'center 5%',
         scene: 'After the night out, the two sit embracing on a low wall or curb, smiling, tired and happy.',
         n: ['כי אחד הדברים הכי יפים בדניאל הוא שהוא יודע ליהנות מהעולם בלי להיות תלוי בדרך אחת לעשות את זה.', 'ומסתבר שגם קרין.'] },
     ],
