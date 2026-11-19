@@ -262,7 +262,7 @@ export const pages = [
       { art: 'p18-f1.png', refs: 'D', ratio: '16:9', pos: 'center 0%',
         scene: 'He as a teenager (about 16, same facial features, no beard yet) in a traditional ultra-Orthodox outfit (white shirt, black trousers, kippah), on a street of a Haredi neighborhood, respectful and warm depiction.',
         n: ['הסיפור של דניאל התחיל בעולם שונה מאוד מזה שהוא מכיר היום.', 'הוא גדל בבית חרדי, עם מסורת, אמונה ואורח חיים שליווה אותו עד גיל 18.'] },
-      { art: 'p18-f2.png', refs: 'D', ratio: '16:9',
+      { art: 'p18-f2.png', refs: 'D', ratio: '16:9', pos: 'center 20%',
         scene: 'Visual transition from the teenage him to the adult him today, with small vignettes flowing between them: work at screens, friends, music (handpan), nature, family.',
         n: ['עם השנים הוא בנה לעצמו דרך משלו.', 'דרך שיש בה מקום גם לעולם שממנו הגיע, וגם לכל העולמות שבחר להכיר.'] },
       { art: 'p18-f3.png', refs: 'D', ratio: '4:3',
