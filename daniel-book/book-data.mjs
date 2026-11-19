@@ -276,7 +276,7 @@ export const pages = [
       { art: 'p19-f1.png', refs: 'D', ratio: '16:9', pos: 'center 0%',
         scene: 'He swimming in clear blue sea water, sun above him, sparkling water.',
         n: ['יש אנשים שהדרך שלהם להירגע היא פשוט לשבת ולא לעשות כלום.', 'אצל דניאל, רוגע יכול להיראות קצת אחרת.'] },
-      { art: 'p19-f2.png', refs: 'D', ratio: '16:9',
+      { art: 'p19-f2.png', refs: 'D', ratio: '16:9', pos: 'center 10%', capSide: 'bottom',
         scene: 'Three-part sequence: he playing basketball on an outdoor court; he working out; he playing a handpan (UFO-shaped steel drum) with eyes closed.',
         n: ['הוא אוהב לזוז, להרגיש, לשחק, לנגן, להתנסות.', 'יש בו סקרנות שלא נגמרת ואהבה אמיתית לחיים.'] },
       { art: 'p19-f3.png', refs: 'DK', ratio: '16:9',
