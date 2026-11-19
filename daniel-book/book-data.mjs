@@ -259,7 +259,7 @@ export const pages = [
   {
     n: 18, title: 'הגוון שבחר את הדרך שלו', sub: 'שורשים עמוקים. אופקים פתוחים.',
     frames: [
-      { art: 'p18-f1.png', refs: 'D', ratio: '16:9',
+      { art: 'p18-f1.png', refs: 'D', ratio: '16:9', pos: 'center 0%',
         scene: 'He as a teenager (about 16, same facial features, no beard yet) in a traditional ultra-Orthodox outfit (white shirt, black trousers, kippah), on a street of a Haredi neighborhood, respectful and warm depiction.',
         n: ['הסיפור של דניאל התחיל בעולם שונה מאוד מזה שהוא מכיר היום.', 'הוא גדל בבית חרדי, עם מסורת, אמונה ואורח חיים שליווה אותו עד גיל 18.'] },
       { art: 'p18-f2.png', refs: 'D', ratio: '16:9',
