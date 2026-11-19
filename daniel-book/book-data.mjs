@@ -273,7 +273,7 @@ export const pages = [
   {
     n: 19, title: 'הגוון שלא יודע לעמוד במקום', sub: 'ים, מוזיקה וקצת אדרנלין.',
     frames: [
-      { art: 'p19-f1.png', refs: 'D', ratio: '16:9',
+      { art: 'p19-f1.png', refs: 'D', ratio: '16:9', pos: 'center 0%',
         scene: 'He swimming in clear blue sea water, sun above him, sparkling water.',
         n: ['יש אנשים שהדרך שלהם להירגע היא פשוט לשבת ולא לעשות כלום.', 'אצל דניאל, רוגע יכול להיראות קצת אחרת.'] },
       { art: 'p19-f2.png', refs: 'D', ratio: '16:9',
