@@ -279,7 +279,7 @@ export const pages = [
       { art: 'p19-f2.png', refs: 'D', ratio: '16:9', pos: 'center 10%', capSide: 'bottom',
         scene: 'Three-part sequence: he playing basketball on an outdoor court; he working out; he playing a handpan (UFO-shaped steel drum) with eyes closed.',
         n: ['הוא אוהב לזוז, להרגיש, לשחק, לנגן, להתנסות.', 'יש בו סקרנות שלא נגמרת ואהבה אמיתית לחיים.'] },
-      { art: 'p19-f3.png', refs: 'DK', ratio: '16:9',
+      { art: 'p19-f3.png', refs: 'DK', ratio: '16:9', pos: 'center 0%',
         scene: 'The couple on the beach at sunset, sitting together on the sand, golden light.',
         n: ['והדבר המיוחד הוא שהוא לא צריך לבחור בין כל הצדדים האלה.', 'הוא יכול לאהוב את הרעש של מסיבה, וגם את השקט של הים.', 'להיות שקוע בעולם של מספרים, ואז פשוט לעצום עיניים ולהקשיב למוזיקה.'] },
     ],
