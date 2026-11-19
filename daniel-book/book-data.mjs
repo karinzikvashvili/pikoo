@@ -265,7 +265,7 @@ export const pages = [
       { art: 'p18-f2.png', refs: 'D', ratio: '16:9', pos: 'center 20%',
         scene: 'Visual transition from the teenage him to the adult him today, with small vignettes flowing between them: work at screens, friends, music (handpan), nature, family.',
         n: ['עם השנים הוא בנה לעצמו דרך משלו.', 'דרך שיש בה מקום גם לעולם שממנו הגיע, וגם לכל העולמות שבחר להכיר.'] },
-      { art: 'p18-f3.png', refs: 'D', ratio: '4:3',
+      { art: 'p18-f3.png', refs: 'D', ratio: '16:9', pos: 'center 0%',
         scene: 'He stands facing a wide open landscape from a hilltop, seen from behind at three-quarter angle, sunrise light.',
         n: ['אולי זה עוד אחד מהגוונים המעניינים שבו.', 'האדם שיודע מאיפה בא, אבל גם מרשה לעצמו לגלות לאן עוד אפשר להגיע.'] },
     ],
