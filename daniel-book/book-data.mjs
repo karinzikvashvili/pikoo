@@ -322,7 +322,7 @@ export const pages = [
       { art: 'p22-f2.png', refs: 'DK', ratio: '4:3', pos: 'center 5%',
         scene: 'The two sit close in a quiet conversation, soft evening light, tender serious expressions.',
         n: ['אבל בתוך כל מה שעברו, הם המשיכו לגלות זה את זו.', 'לצחוק, לדבר, להתקרב, לפעמים גם לא להסכים.', 'ובעיקר — ללמוד מה באמת חשוב להם.'] },
-      { art: 'p22-f3.png', refs: 'DK', ratio: '16:9',
+      { art: 'p22-f3.png', pos: 'center 15%', refs: 'DK', ratio: '16:9',
         scene: 'Wide shot: the couple embracing, facing the sea, seen from behind, sunset.',
         n: ['יש אנשים שנכנסים לחיים לרגע.', 'ויש אנשים שגם אחרי שהחיים משתנים, נשאר להם מקום שאף אחד אחר לא באמת תופס.'] },
     ],
