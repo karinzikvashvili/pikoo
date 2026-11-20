@@ -290,7 +290,7 @@ export const pages = [
       { art: 'p20-f1.png', refs: 'DK', ratio: '16:9', pos: 'center 0%', capSide: 'br',
         scene: 'She gets ready to go out, putting on earrings in front of a mirror; he plugs her phone into a charger and holds up her keys so she won\'t forget them.',
         n: ['קרין תמיד הייתה קצת יותר רומנטית.', 'דניאל, לעומתה, יודע להביע אהבה גם בדרכים שלא תמיד מופיעות בסרטים.'] },
-      { art: 'p20-f2.png', refs: 'D', ratio: '16:9',
+      { art: 'p20-f2.png', refs: 'D', ratio: '16:9', pos: 'center 0%', capSide: 'bottom',
         scene: 'Collage of small caring gestures by him: making two coffees, putting her charger in her bag, placing a jacket on her shoulders, checking the weather on his phone for both.',
         n: ['הוא שם לב לדברים הקטנים.', 'דואג שלא יחסר לה.', 'חושב על דברים שעוד לא הספיקה לחשוב עליהם בעצמה.'] },
       { art: 'p20-f3.png', refs: 'DK', ratio: '16:9',
