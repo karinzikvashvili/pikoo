@@ -55,7 +55,7 @@ function pageHTML(p) {
       <div class="paper">${p.letterText.map((t) => `<p>${esc(t)}</p>`).join('')}</div>
       </section>`;
   }
-  const body = rows(p.frames).map((r) => `<div class="row">${r.map(frameHTML).join('')}</div>`).join('');
+  const body = rows(p.frames).map((r) => `<div class="row"${r.length === 1 && r[0].grow ? ` style="flex-grow:${r[0].grow}"` : ""}>${r.map(frameHTML).join('')}</div>`).join('');
   return `<section class="page">${head}<div class="grid">${body}</div></section>`;
 }
 
