@@ -287,7 +287,7 @@ export const pages = [
   {
     n: 20, title: 'הגוון שאוהב בדרכו', sub: 'לא כל מחווה מגיעה עטופה בסרט.',
     frames: [
-      { art: 'p20-f1.png', refs: 'DK', ratio: '16:9',
+      { art: 'p20-f1.png', refs: 'DK', ratio: '16:9', pos: 'center 0%', capSide: 'br',
         scene: 'She gets ready to go out, putting on earrings in front of a mirror; he plugs her phone into a charger and holds up her keys so she won\'t forget them.',
         n: ['קרין תמיד הייתה קצת יותר רומנטית.', 'דניאל, לעומתה, יודע להביע אהבה גם בדרכים שלא תמיד מופיעות בסרטים.'] },
       { art: 'p20-f2.png', refs: 'D', ratio: '16:9',

@@ -48,6 +48,7 @@ header .sub i { font-style: normal; font-size: 13pt; }
 .cap.bottom { top: auto; transform: none; bottom: 2.2mm; width: auto; max-width: 70%; }
 .row > .frame:only-child .cap.bottom { max-width: 60%; }
 .row > .frame:not(:only-child) .cap.bottom { left: 2.2mm; right: 2.2mm; max-width: none; font-size: 9.2pt; padding: 1.6mm 2.6mm; }
+.cap.br { top: auto; transform: none; bottom: 2.2mm; left: auto; right: 2.2mm; width: auto; max-width: 46%; }
 
 /* ---------- speech balloons ---------- */
 .bubbles { position: absolute; inset: 2.4mm 3mm; z-index: 2; display: flex; flex-direction: column; gap: 4mm; pointer-events: none; }
