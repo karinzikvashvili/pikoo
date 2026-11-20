@@ -319,7 +319,7 @@ export const pages = [
       { art: 'p22-f1.png', refs: 'DK', ratio: '16:9', capSide: 'strip', grow: 1.5, pos: 'center 30%',
         scene: 'A row of five small illustrated memory vignettes of the couple, like film frames: meeting at the gym, the nightclub night, a night conversation, the tiny studio apartment, the beach.',
         n: ['שלוש וחצי שנים עברו מאז המפגש הראשון.', 'לא כל התקופות היו פשוטות.', 'לא כל התשובות הגיעו מיד.', 'ולא תמיד היה קל לשני אנשים שלמדו במשך שנים לשמור לעצמם כל כך הרבה בפנים.'] },
-      { art: 'p22-f2.png', refs: 'DK', ratio: '4:3',
+      { art: 'p22-f2.png', refs: 'DK', ratio: '4:3', pos: 'center 5%',
         scene: 'The two sit close in a quiet conversation, soft evening light, tender serious expressions.',
         n: ['אבל בתוך כל מה שעברו, הם המשיכו לגלות זה את זו.', 'לצחוק, לדבר, להתקרב, לפעמים גם לא להסכים.', 'ובעיקר — ללמוד מה באמת חשוב להם.'] },
       { art: 'p22-f3.png', refs: 'DK', ratio: '16:9',
