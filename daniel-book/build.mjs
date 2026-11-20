@@ -35,7 +35,7 @@ function frameHTML(f) {
   const cls = f.d || f._half || f.capSide === 'bottom' ? 'bottom' : len < 40 ? 'tiny' : len > 260 ? 'wide' : '';
   const box = caps ? `<div class="cap ${f.capSide || ''} ${cls}">${caps}</div>` : '';
   const label = '';
-  return `<div class="frame"><div class="art">${img}${label}${box}<div class="bubbles">${bubbles}</div></div></div>`;
+  return `<div class="frame"><div class="art">${img}${label}${box}<div class="bubbles${f.bub ? ' ' + f.bub : ''}">${bubbles}</div></div></div>`;
 }
 
 function pageHTML(p) {

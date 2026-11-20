@@ -293,7 +293,7 @@ export const pages = [
       { art: 'p20-f2.png', refs: 'D', ratio: '16:9', pos: 'center 0%', capSide: 'bottom',
         scene: 'Collage of small caring gestures by him: making two coffees, putting her charger in her bag, placing a jacket on her shoulders, checking the weather on his phone for both.',
         n: ['הוא שם לב לדברים הקטנים.', 'דואג שלא יחסר לה.', 'חושב על דברים שעוד לא הספיקה לחשוב עליהם בעצמה.'] },
-      { art: 'p20-f3.png', refs: 'DK', ratio: '16:9',
+      { art: 'p20-f3.png', refs: 'DK', ratio: '16:9', pos: 'center 0%', bub: 'tight',
         scene: 'She hugs him from behind; he turns his head toward her and smiles. Warm home light. Space at the top for speech bubbles.',
         d: [['K', 'מאמי, אתה יודע שאני אוהבת אותך?'], ['D', 'יודע, חיים.'], ['K', 'יופי. רק בודקת שאתה מעודכן.']],
         n: ['הם אולי לא תמיד מדברים באותה שפת אהבה.', 'אבל עם הזמן, הם למדו להבין קצת יותר את השפה של הצד השני.'] },

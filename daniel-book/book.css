@@ -52,6 +52,7 @@ header .sub i { font-style: normal; font-size: 13pt; }
 
 /* ---------- speech balloons ---------- */
 .bubbles { position: absolute; inset: 2.4mm 3mm; z-index: 2; display: flex; flex-direction: column; gap: 4mm; pointer-events: none; }
+.bubbles.tight { gap: .6mm; } .bubbles.tight .bubble:nth-child(2) { margin-top: -7mm; }
 .bubble { position: relative; max-width: 44%; background: #fff; border: 2px solid var(--ink); border-radius: 50%;
   padding: 3mm 6mm; text-align: center; font-weight: 500; font-size: 10.6pt; line-height: 1.25; }
 .bubble.r { align-self: flex-start; } .bubble.l { align-self: flex-end; }
