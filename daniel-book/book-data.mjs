@@ -308,7 +308,7 @@ export const pages = [
       { art: 'p21-f2.png', refs: 'DK', ratio: '4:3',
         scene: 'The couple walk hand in hand, laughing, sunny street.',
         n: ['אבל האמת היא ששניהם הרבה יותר מההגדרות האלה.', 'שניהם אוהבים חופש, מוזיקה, ספונטניות, שיחות ארוכות ואת כל מה שגורם לחיים להרגיש קצת יותר חיים.'] },
-      { art: 'p21-f3.png', refs: 'DK', ratio: '4:3',
+      { art: 'p21-f3.png', refs: 'DK', ratio: '4:3', pos: 'center 0%',
         scene: 'Close together, exchanging a long loving glance, soft golden light.',
         n: ['והם לא היו צריכים להפוך אחד את השנייה למישהו אחר.', 'הם פשוט למדו להכיר, לאט לאט, עוד גוונים בעצמם — וזו בזה.'] },
     ],
