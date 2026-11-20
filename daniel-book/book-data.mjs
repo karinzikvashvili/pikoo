@@ -330,7 +330,7 @@ export const pages = [
   {
     n: 23, title: 'הגוון ה־37', sub: 'יעד חדש נפתח.',
     frames: [
-      { art: 'p23-f1.png', refs: 'DK', ratio: '16:9',
+      { art: 'p23-f1.png', pos: 'center 0%', refs: 'DK', ratio: '16:9',
         scene: 'Airport departure hall: the couple with suitcases and passports, excited; a large departures board in the background (illegible text except it implies Thailand, e.g. a small Thai flag icon).',
         n: ['ואז הגיע דצמבר 2026.', 'דניאל עמד לחגוג יום הולדת 37.', 'ואחרי כל כך הרבה גוונים, חוויות והרפתקאות, הגיע הזמן להוסיף עוד אחת לאוסף.'] },
       { art: 'p23-f2.png', refs: 'DK', ratio: '4:3',
