@@ -339,7 +339,7 @@ export const pages = [
       { art: 'p23-f3.png', refs: 'DK', ratio: '4:3',
         scene: 'Colorful transition to Pattaya: the two getting ready for a celebration in a hotel room with a view; beyond, the giant lights and stage of a huge music festival at night.',
         n: ['יום הולדת, מוזיקה, חופש, מסיבה גדולה...', 'וקצת זמן לשכוח מכל מה שצריך לעשות כשחוזרים הביתה.'] },
-      { art: 'p23-f4.png', refs: 'DK', ratio: '16:9',
+      { art: 'p23-f4.png', pos: 'center 0%', refs: 'DK', ratio: '16:9',
         scene: 'The couple embracing, surrounded by spectacular festival lights and confetti; she looks up at him and smiles.',
         n: ['אבל לפני שמתחילה ההרפתקה הבאה...', 'יש לקרין עוד משהו קטן להגיד.'] },
     ],
