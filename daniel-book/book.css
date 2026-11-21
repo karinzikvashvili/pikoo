@@ -83,8 +83,8 @@ header .sub i { font-style: normal; font-size: 13pt; }
   clip-path: polygon(3% 18%, 9% 4%, 30% 9%, 52% 0, 76% 7%, 94% 2%, 100% 30%, 96% 55%, 100% 88%, 80% 96%, 55% 100%, 30% 93%, 8% 100%, 0 78%, 4% 50%, 0 30%); }
 
 /* ---------- letter (page 24) ---------- */
-.letter .hero { height: 86mm; position: relative; border: 2.2px solid var(--ink); flex: none; }
+.letter .hero { height: 110mm; position: relative; border: 2.2px solid var(--ink); flex: none; }
 .letter .paper { flex: 1; background: var(--cream); border: 1.6px solid var(--ink); padding: 4.5mm 8mm;
-  font-family: 'Playpen Sans Hebrew'; font-size: 10pt; line-height: 1.55; }
-.letter .paper p + p { margin-top: 1.3mm; }
-.letter .paper p:first-child, .letter .paper p:nth-last-child(-n+2) { font-weight: 800; font-size: 11pt; }
+  font-family: 'Playpen Sans Hebrew'; font-size: 11pt; line-height: 1.7; }
+.letter .paper p + p { margin-top: 2.2mm; }
+.letter .paper p:first-child, .letter .paper p:nth-last-child(-n+2) { font-weight: 800; font-size: 12pt; }
